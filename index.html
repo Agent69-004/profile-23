@@ -1,689 +1,1068 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <meta name="theme-color" content="#0a0005" />
-    <title>PINK VICE · After Dark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مسابقة حلم - مصطفى الآغا</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@700;800;900&family=Russo+One&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
-        * {
+        /* ---------- RESET & BASE ---------- */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: #0a0005;
-            font-family: 'Inter', sans-serif;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
+            font-family: 'Cairo', sans-serif;
+            background: #0b0e1a;
+            color: #f0f2f8;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        /* —— Static background with subtle gradient —— */
-        .bg-static {
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------- UTILITIES ---------- */
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title-wrapper .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #f7c948, #d4a020);
+            border-radius: 4px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #aab0c9;
+            max-width: 640px;
+            margin: 0 auto 2rem;
+        }
+
+        .gold-text {
+            color: #f7c948;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background: linear-gradient(135deg, #f7c948, #d4a020);
+            color: #0b0e1a;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 16px 44px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 28px rgba(247, 201, 72, 0.25);
+            letter-spacing: 0.5px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(247, 201, 72, 0.4);
+            background: linear-gradient(135deg, #fddb6e, #d4a020);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #f7c948;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 14px 38px;
+            border-radius: 50px;
+            border: 2px solid #f7c948;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .btn-outline:hover {
+            background: #f7c948;
+            color: #0b0e1a;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- ANIMATED BG ---------- */
+        .bg-glow {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(ellipse at 30% 20%, rgba(255, 0, 170, 0.08), transparent 60%),
-                radial-gradient(ellipse at 70% 80%, rgba(255, 0, 102, 0.05), transparent 50%),
-                #0a0005;
-            z-index: 0;
+            z-index: -2;
+            background: radial-gradient(ellipse at 20% 50%, rgba(247, 201, 72, 0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(247, 201, 72, 0.03) 0%, transparent 50%),
+                #0b0e1a;
         }
 
-        /* —— Main Container —— */
-        .club-pink {
-            max-width: 1300px;
+        /* ---------- NAV ---------- */
+        nav {
+            padding: 18px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #f7c948, #d4a020);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #0b0e1a;
+            box-shadow: 0 4px 20px rgba(247, 201, 72, 0.25);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .logo-text span {
+            color: #f7c948;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #f7c948;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
             width: 100%;
-            background: rgba(8, 0, 5, 0.85);
-            border-radius: 72px;
-            border: 2px solid rgba(255, 0, 170, 0.4);
-            box-shadow: 0 0 60px rgba(255, 0, 170, 0.15), inset 0 0 60px rgba(255, 0, 170, 0.03);
-            padding: 2rem 2rem 1.5rem;
+        }
+
+        .nav-links a:hover {
+            color: #f7c948;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 40px 0 70px;
             position: relative;
             z-index: 2;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            /* hardware acceleration */
-            transform: translateZ(0);
         }
 
-        /* —— Header —— */
-        .neon-header {
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, #f7c948, #e6b422);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .hero-content .sub-headline {
+            font-size: 1.2rem;
+            color: #c8cee6;
+            margin: 1rem 0 2rem;
+            max-width: 540px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 30px;
+            margin-top: 2rem;
+        }
+
+        .hero-badges .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: #c8cee6;
+        }
+
+        .hero-badges .badge .icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(247, 201, 72, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image .card-glow {
+            width: 100%;
+            max-width: 460px;
+            aspect-ratio: 1/1;
+            border-radius: 40px;
+            background: linear-gradient(145deg, rgba(247, 201, 72, 0.08), rgba(247, 201, 72, 0.02));
+            border: 1px solid rgba(247, 201, 72, 0.15);
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 30px;
             text-align: center;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             position: relative;
-            z-index: 4;
-            margin-bottom: 1.6rem;
+            overflow: hidden;
         }
 
-        .dj-badge {
-            display: inline-flex;
-            gap: 12px;
-            background: rgba(255, 0, 170, 0.08);
-            border: 1px solid rgba(255, 0, 170, 0.3);
-            padding: 0.25rem 1.2rem;
-            border-radius: 60px;
-            font-size: 0.55rem;
+        .hero-image .card-glow::before {
+            content: 'حلم';
+            position: absolute;
+            font-size: 10rem;
+            font-weight: 900;
+            color: rgba(247, 201, 72, 0.04);
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .hero-image .card-glow .big-icon {
+            font-size: 5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-image .card-glow h3 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #f7c948;
+        }
+
+        .hero-image .card-glow p {
+            color: #aab0c9;
+            font-size: 1rem;
+        }
+
+        .hero-image .card-glow .prize-badge {
+            margin-top: 1.2rem;
+            background: rgba(247, 201, 72, 0.1);
+            padding: 10px 28px;
+            border-radius: 50px;
+            border: 1px solid rgba(247, 201, 72, 0.2);
             font-weight: 700;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #ff66cc;
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 0.8rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .dj-badge:hover {
-            border-color: #ff00aa;
-            box-shadow: 0 0 30px rgba(255, 0, 170, 0.2);
+            font-size: 1.1rem;
         }
 
-        .main-title {
-            font-family: 'Monoton', cursive;
-            font-size: clamp(3.2rem, 13vw, 7rem);
-            font-weight: 400;
-            text-transform: uppercase;
-            line-height: 1;
-            letter-spacing: 3px;
-            color: #ff44aa;
-            text-shadow: 0 0 30px #ff00aa, 0 0 60px #ff0066, 0 0 90px #ff00aa;
-            animation: titlePulse 3s infinite alternate ease-in-out;
-            will-change: transform;
+        /* floating decorations */
+        .float-star {
+            position: absolute;
+            font-size: 1.8rem;
+            opacity: 0.15;
+            animation: float 6s ease-in-out infinite;
         }
 
-        @keyframes titlePulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.02); }
+        .float-star:nth-child(2) {
+            top: 10%;
+            left: 5%;
+            animation-delay: 1s;
+            font-size: 2.4rem;
+        }
+        .float-star:nth-child(3) {
+            bottom: 15%;
+            right: 8%;
+            animation-delay: 2s;
+            font-size: 1.4rem;
         }
 
-        .title-sub {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(0.6rem, 1.3vw, 1.1rem);
-            letter-spacing: 8px;
-            color: #ff88dd;
-            text-shadow: 0 0 20px #ff00aa;
-            margin-top: 2px;
-            opacity: 0.9;
-        }
-
-        .tagline-ultra {
-            font-family: 'Russo One', sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: #ff88dd;
-            border-top: 2px solid rgba(255, 0, 170, 0.25);
-            border-bottom: 2px solid rgba(255, 0, 170, 0.25);
-            padding: 0.4rem 1.6rem;
-            display: inline-block;
-            margin-top: 0.8rem;
-            background: rgba(0, 0, 0, 0.3);
-            font-weight: 400;
-            box-shadow: 0 0 20px rgba(255, 0, 170, 0.05);
-        }
-
-        /* —— Dance Floor —— */
-        .dance-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.6rem;
-            position: relative;
-            z-index: 4;
-            margin: 0.6rem 0;
-        }
-
-        @media (min-width: 768px) {
-            .dance-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 1.8rem;
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-16px);
             }
         }
 
-        .vip-booth {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 48px;
-            padding: 1.8rem 1.4rem;
+        /* ---------- ABOUT ---------- */
+        .about {
+            padding: 70px 0 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #c8cee6;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .about-text .highlight-box {
+            background: rgba(247, 201, 72, 0.05);
+            border-right: 4px solid #f7c948;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .about-image {
+            background: linear-gradient(145deg, rgba(247, 201, 72, 0.06), rgba(247, 201, 72, 0.01));
+            border-radius: 30px;
+            padding: 30px;
+            border: 1px solid rgba(247, 201, 72, 0.08);
             text-align: center;
-            border: 2px solid rgba(255, 0, 170, 0.15);
-            box-shadow: 0 0 20px rgba(255, 0, 170, 0.03);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+        }
+
+        .about-image .quote {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f7c948;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .about-image .quote-author {
+            color: #aab0c9;
+            font-size: 1rem;
+        }
+
+        /* ---------- PRIZES ---------- */
+        .prizes {
+            padding: 70px 0 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prizes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .prize-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 28px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 1px solid rgba(247, 201, 72, 0.08);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(2px);
             position: relative;
             overflow: hidden;
-            transform: translateY(0);
-            will-change: transform, border-color, box-shadow;
         }
 
-        .vip-booth:hover {
-            transform: translateY(-6px) scale(1.015);
-            border-color: #ff00aa;
-            box-shadow: 0 0 40px rgba(255, 0, 170, 0.25), 0 0 80px rgba(255, 0, 102, 0.08);
+        .prize-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(247, 201, 72, 0.25);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            background: rgba(247, 201, 72, 0.03);
         }
 
-        .booth-icon {
+        .prize-card .rank {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #f7c948;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(247, 201, 72, 0.08);
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .prize-card .icon-big {
             font-size: 3.2rem;
-            display: block;
-            margin-bottom: 0.1rem;
-            filter: drop-shadow(0 0 12px #ff00aa);
-            transition: transform 0.3s;
-            will-change: transform;
-        }
-        .vip-booth:hover .booth-icon {
-            transform: scale(1.1) translateY(-4px);
+            margin: 0.5rem 0 0.8rem;
         }
 
-        .vip-booth h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
+        .prize-card h4 {
+            font-size: 1.6rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ff44aa, #ff88dd);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 0.4rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
         }
 
-        .vip-booth p {
-            color: #c8a0bc;
-            font-size: 0.75rem;
-            font-weight: 300;
-            line-height: 1.6;
-            margin-bottom: 1.2rem;
-            opacity: 0.85;
+        .prize-card .amount {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #f7c948;
+            margin: 0.6rem 0 0.3rem;
         }
 
-        .btn-neon {
-            background: transparent;
-            border: 2px solid #ff00aa;
-            color: #ff44aa;
-            padding: 0.6rem 1rem;
-            border-radius: 60px;
-            font-weight: 800;
-            font-size: 0.65rem;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            width: 85%;
-            max-width: 200px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-family: 'Orbitron', sans-serif;
-            box-shadow: 0 0 15px rgba(255, 0, 170, 0.05);
-            will-change: transform, background, color, box-shadow;
+        .prize-card .desc {
+            color: #aab0c9;
+            font-size: 0.95rem;
         }
 
-        .btn-neon:hover {
-            background: #ff00aa;
-            color: #0a0005;
-            box-shadow: 0 0 40px #ff00aa, 0 0 80px #ff0066;
-            transform: scale(1.05);
+        .prize-card.gold {
+            border-color: rgba(247, 201, 72, 0.25);
+            background: rgba(247, 201, 72, 0.05);
         }
 
-        .btn-neon--hot {
-            border-color: #ff3388;
-            color: #ff88dd;
-        }
-        .btn-neon--hot:hover {
-            background: #ff3388;
-            color: #0a0005;
-            box-shadow: 0 0 50px #ff3388, 0 0 100px #ff00aa;
+        .prize-card.gold .rank {
+            background: rgba(247, 201, 72, 0.15);
         }
 
-        .btn-neon--dual {
-            border-image: linear-gradient(135deg, #ff0066, #ff44aa) 1;
-            color: #fff;
-            text-shadow: 0 0 10px #ff00aa;
-        }
-        .btn-neon--dual:hover {
-            background: linear-gradient(135deg, #ff0066, #ff44aa);
-            border-image: none;
-            color: #0a0005;
-            box-shadow: 0 0 50px #ff44aa;
+        /* ---------- TIMELINE ---------- */
+        .timeline {
+            padding: 60px 0 70px;
+            position: relative;
+            z-index: 2;
         }
 
-        /* —— Footer —— */
-        .neon-footer {
-            margin-top: 1.6rem;
-            padding-top: 0.8rem;
-            border-top: 2px solid rgba(255, 0, 170, 0.12);
+        .timeline-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 24px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(247, 201, 72, 0.06);
+            transition: 0.3s;
+        }
+
+        .step:hover {
+            background: rgba(247, 201, 72, 0.04);
+            border-color: rgba(247, 201, 72, 0.15);
+        }
+
+        .step .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f7c948, #d4a020);
+            color: #0b0e1a;
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .step h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .step p {
+            color: #aab0c9;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- CTA / REGISTER ---------- */
+        .cta-section {
+            padding: 70px 0 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-box {
+            background: linear-gradient(145deg, rgba(247, 201, 72, 0.06), rgba(247, 201, 72, 0.01));
+            border-radius: 50px;
+            padding: 60px 40px;
+            border: 1px solid rgba(247, 201, 72, 0.1);
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box p {
+            color: #c8cee6;
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            padding: 40px 0 30px;
+            border-top: 1px solid rgba(247, 201, 72, 0.06);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.55rem;
-            color: #775577;
-            position: relative;
-            z-index: 4;
+            gap: 20px;
         }
 
-        .neon-footer a {
-            color: #ff44aa;
-            text-decoration: none;
-            margin: 0 6px;
-            transition: color 0.3s, text-shadow 0.3s;
-            font-weight: 600;
-            position: relative;
+        .footer-socials {
+            display: flex;
+            gap: 18px;
         }
 
-        .neon-footer a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ff00aa;
-            transition: width 0.3s;
+        .footer-socials a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            border: 1px solid rgba(247, 201, 72, 0.06);
         }
 
-        .neon-footer a:hover::after {
-            width: 100%;
-        }
-        .neon-footer a:hover {
-            color: #ff88dd;
-            text-shadow: 0 0 20px #ff00aa;
+        .footer-socials a:hover {
+            background: rgba(247, 201, 72, 0.1);
+            border-color: #f7c948;
+            transform: translateY(-3px);
         }
 
-        .neon-footer .vip-tag {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 2px;
-            background: rgba(255, 0, 170, 0.08);
-            padding: 3px 14px;
-            border-radius: 60px;
-            border: 1px solid rgba(255, 0, 170, 0.3);
-            color: #ff66cc;
+        .footer-copy {
+            color: #6b728e;
+            font-size: 0.9rem;
         }
 
-        /* —— Particle Canvas —— */
-        #particleCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            will-change: transform;
-        }
-
-        /* —— Responsive —— */
-        @media (max-width: 640px) {
-            .club-pink {
-                padding: 1rem 0.8rem;
-                border-radius: 40px;
-            }
-            .vip-booth {
-                padding: 1.2rem 0.8rem;
-                border-radius: 32px;
-            }
-            .vip-booth h3 {
-                font-size: 1.1rem;
-            }
-            .btn-neon {
-                width: 100%;
-                font-size: 0.55rem;
-                padding: 0.5rem;
-            }
-            .neon-footer {
-                flex-direction: column;
-                gap: 8px;
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
-            .main-title {
-                font-size: clamp(2.4rem, 11vw, 3.6rem);
+
+            .hero-content .sub-headline {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-text .highlight-box {
+                border-right: none;
+                border-bottom: 4px solid #f7c948;
+                padding: 18px 12px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: block;
+            }
+
+            .nav-cta .btn-gold {
+                padding: 10px 28px;
+                font-size: 0.95rem;
             }
         }
 
-        /* —— Scrollbar —— */
-        ::-webkit-scrollbar {
-            width: 4px;
+        @media (max-width: 600px) {
+            .hero {
+                padding-top: 20px;
+            }
+
+            .hero-image .card-glow {
+                padding: 20px;
+            }
+
+            .hero-image .card-glow .big-icon {
+                font-size: 3.5rem;
+            }
+
+            .hero-image .card-glow h3 {
+                font-size: 1.6rem;
+            }
+
+            .cta-box {
+                padding: 40px 20px;
+                border-radius: 30px;
+            }
+
+            .prize-card .amount {
+                font-size: 1.8rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
         }
-        ::-webkit-scrollbar-track {
-            background: #0a0005;
+
+        /* ---------- SCROLL REVEAL (simple) ---------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #ff00aa;
-            border-radius: 10px;
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------- COUNTER (JS) ---------- */
+        .counter-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 2rem 0 0.5rem;
+        }
+
+        .counter-item {
+            text-align: center;
+        }
+
+        .counter-item .number {
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #f7c948;
+            line-height: 1.2;
+        }
+
+        .counter-item .label {
+            font-size: 0.85rem;
+            color: #aab0c9;
         }
     </style>
 </head>
 <body>
 
-    <!-- Static background -->
-    <div class="bg-static"></div>
+    <!-- Background Glow -->
+    <div class="bg-glow"></div>
 
-    <!-- Particle Canvas -->
-    <canvas id="particleCanvas"></canvas>
-
-    <!-- Main Container -->
-    <div class="club-pink" id="mainBox">
-
-        <div class="neon-header">
-            <div class="dj-badge">
-                <span>✦ 4K LIVE</span>
-                <span>✦</span>
-                <span>AFTER DARK</span>
-                <span>✦</span>
-                <span>21+</span>
+    <!-- ============ NAV ============ -->
+    <nav>
+        <div class="container nav-inner">
+            <div class="logo">
+                <div class="logo-icon">ح</div>
+                <div class="logo-text">حلم <span>مصطفى</span></div>
             </div>
-            <h1 class="main-title">Pink Vice</h1>
-            <div class="title-sub">━━━ House of Lust ━━━</div>
-            <div class="tagline-ultra">✧ verified · immersive · sinful ✧</div>
-        </div>
-
-        <div class="dance-grid">
-            <div class="vip-booth" data-action="vault">
-                <span class="booth-icon">🍆💦</span>
-                <h3>Sinful Vault</h3>
-                <p>Exclusive 4K edits, taboo drops, and private backroom collections. Updated nightly.</p>
-                <button class="btn-neon btn-neon--hot" data-action="vault">Enter The Vault</button>
-            </div>
-
-            <div class="vip-booth" data-action="live">
-                <span class="booth-icon">🎥🔥</span>
-                <h3>Live Stage</h3>
-                <p>Interactive models, toy control, raw connection. Your fantasy, live and unfiltered.</p>
-                <button class="btn-neon" data-action="live">Watch Live</button>
-            </div>
-
-            <div class="vip-booth" data-action="diamond">
-                <span class="booth-icon">💎👑</span>
-                <h3>Diamond Lounge</h3>
-                <p>Zero ads, 8K unlimited, custom requests, priority VIP access. The ultimate key.</p>
-                <button class="btn-neon btn-neon--dual" data-action="diamond">Unlock VIP</button>
+            <ul class="nav-links">
+                <li><a href="#about">عن المسابقة</a></li>
+                <li><a href="#prizes">الجوائز</a></li>
+                <li><a href="#timeline">الجدول</a></li>
+                <li><a href="#register">سجل الآن</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#register" class="btn-gold">انضم الآن</a>
             </div>
         </div>
+    </nav>
 
-        <div class="neon-footer">
-            <span>© 2025 · PINK VICE · <span class="vip-tag">✦ VIP ONLY ✦</span></span>
-            <div>
-                <a href="#" id="footer2257">2257</a> ·
-                <a href="#" id="footerTerms">Terms 21+</a> ·
-                <a href="#" id="footerPrivacy">Privacy</a>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>
+                    مسابقة <br />
+                    <span class="highlight">"حلم"</span>
+                </h1>
+                <p class="sub-headline">
+                    انطلق في رحلة استثنائية نحو تحقيق حلمك مع الإعلامي الكبير
+                    <strong class="gold-text">مصطفى الآغا</strong>.
+                    فرصة لا تُعوّض للفوز بجوائز مذهلة وتجربة تغيّر حياتك.
+                </p>
+                <a href="#register" class="btn-gold">سجّل الآن &larr;</a>
+
+                <div class="hero-badges">
+                    <span class="badge">
+                        <span class="icon">🏆</span> جوائز تتجاوز 100,000 $
+                    </span>
+                    <span class="badge">
+                        <span class="icon">📅</span> التسجيل مفتوح حتى 15 أغسطس
+                    </span>
+                    <span class="badge">
+                        <span class="icon">👥</span> أكثر من 5,000 مشارك
+                    </span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="card-glow">
+                    <span class="big-icon">🌟</span>
+                    <h3>حلمك يبدأ هنا</h3>
+                    <p>انضم إلى آلاف المبدعين وشارك في أكبر مسابقة تلفزيونية</p>
+                    <div class="prize-badge">🎯 الجائزة الكبرى: 50,000 $</div>
+                </div>
+                <!-- floating stars -->
+                <span class="float-star">✦</span>
+                <span class="float-star">✦</span>
+                <span class="float-star">✦</span>
             </div>
         </div>
+    </section>
 
-    </div>
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <h2 class="section-title">عن مسابقة <span class="gold-text">حلم</span></h2>
+                <p class="section-subtitle">
+                    منصة تبحث عن المواهب الاستثنائية في مختلف المجالات، تحت إشراف
+                    الإعلامي القدير مصطفى الآغا.
+                </p>
+            </div>
 
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        <strong class="gold-text">حلم</strong> هي أكثر من مجرد مسابقة؛
+                        إنها رحلة تحويلية تمنح الموهوبين فرصة الظهور على منصات كبرى
+                        والتفاعل مع جمهور عريض. تجمع بين الإبداع، التحدي، والتعلم،
+                        وتُختتم بجوائز مالية قيّمة ودعم احترافي.
+                    </p>
+                    <div class="highlight-box">
+                        <p style="margin:0; font-weight:600; color:#f7c948;">
+                            "نحن نبحث عن الحالمين الذين يملكون الشغف والإصرار
+                            ليُصبحوا نجوماً في عالمهم."
+                        </p>
+                    </div>
+                    <p>
+                        يُشرف على المسابقة نخبة من الخبراء في مجالات الفن، الإعلام،
+                        وريادة الأعمال، مع متابعة حصرية من <strong>مصطفى الآغا</strong>.
+                    </p>
+                </div>
+                <div class="about-image reveal">
+                    <div class="quote">
+                        "كل حلم كبير يبدأ بخطوة شجاعة."
+                    </div>
+                    <div class="quote-author">— مصطفى الآغا</div>
+                    <div style="margin-top:1.8rem; font-size:3.5rem;">🎬</div>
+                    <p style="color:#6b728e; font-size:0.9rem; margin-top:0.5rem;">
+                        موسم 2025 · تحت رعاية مجموعة إعلامية رائدة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRIZES ============ -->
+    <section class="prizes" id="prizes">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <h2 class="section-title">جوائز <span class="gold-text">المسابقة</span></h2>
+                <p class="section-subtitle">
+                    جوائز مالية ودعم احترافي للفائزين الثلاثة الأوائل، بالإضافة إلى
+                    فرص تعاقدية مع كبرى المؤسسات الإعلامية.
+                </p>
+            </div>
+
+            <div class="prizes-grid">
+                <!-- Gold -->
+                <div class="prize-card gold reveal">
+                    <span class="rank">🥇 المركز الأول</span>
+                    <div class="icon-big">👑</div>
+                    <h4>الجائزة الكبرى</h4>
+                    <div class="amount">50,000 $</div>
+                    <p class="desc">+ عقد إعلامي + تدريب شخصي مع مصطفى الآغا</p>
+                </div>
+
+                <!-- Silver -->
+                <div class="prize-card reveal">
+                    <span class="rank">🥈 المركز الثاني</span>
+                    <div class="icon-big">⭐</div>
+                    <h4>الجائزة الفضية</h4>
+                    <div class="amount">25,000 $</div>
+                    <p class="desc">+ تغطية إعلامية + استشارات مهنية</p>
+                </div>
+
+                <!-- Bronze -->
+                <div class="prize-card reveal">
+                    <span class="rank">🥉 المركز الثالث</span>
+                    <div class="icon-big">🎯</div>
+                    <h4>الجائزة البرونزية</h4>
+                    <div class="amount">10,000 $</div>
+                    <p class="desc">+ عضوية في شبكة المواهب لمدة عام</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TIMELINE ============ -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <h2 class="section-title">الجدول الزمني</h2>
+                <p class="section-subtitle">مراحل المسابقة من التسجيل إلى الحفل الختامي.</p>
+            </div>
+
+            <div class="timeline-steps">
+                <div class="step reveal">
+                    <div class="num">١</div>
+                    <h5>فتح التسجيل</h5>
+                    <p>من 1 يوليو حتى 15 أغسطس 2025</p>
+                </div>
+                <div class="step reveal">
+                    <div class="num">٢</div>
+                    <h5>التصفيات الأولية</h5>
+                    <p>تقييم المشاركات واختيار 50 متسابقاً</p>
+                </div>
+                <div class="step reveal">
+                    <div class="num">٣</div>
+                    <h5>المعارس المباشرة</h5>
+                    <p>سبتمبر 2025 — عروض مباشرة أمام لجنة التحكيم</p>
+                </div>
+                <div class="step reveal">
+                    <div class="num">٤</div>
+                    <h5>الحفل الختامي</h5>
+                    <p>أكتوبر 2025 — إعلان الفائزين وتوزيع الجوائز</p>
+                </div>
+            </div>
+
+            <!-- counter -->
+            <div class="counter-wrap reveal">
+                <div class="counter-item">
+                    <div class="number" id="days">--</div>
+                    <div class="label">يوم متبقي</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number" id="hours">--</div>
+                    <div class="label">ساعة</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number" id="minutes">--</div>
+                    <div class="label">دقيقة</div>
+                </div>
+                <div class="counter-item">
+                    <div class="number" id="seconds">--</div>
+                    <div class="label">ثانية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA / REGISTER ============ -->
+    <section class="cta-section" id="register">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>جاهز لتحقيق <span class="gold-text">حلمك</span>؟</h2>
+                <p>
+                    سجّل الآن وشارك في أكبر مسابقة تلفزيونية مع مصطفى الآغا.
+                    الفرصة محدودة، لا تتردد!
+                </p>
+                <div class="cta-actions">
+                    <a href="#" class="btn-gold">سجّل الآن &larr;</a>
+                    <a href="#" class="btn-outline">تعرف على الشروط</a>
+                </div>
+                <p style="margin-top:1.8rem; font-size:0.85rem; color:#6b728e;">
+                    * التسجيل مجاني · مفتوح للمشاركين من جميع الدول العربية
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="logo" style="gap:10px;">
+                <div class="logo-icon" style="width:38px; height:38px; font-size:1.2rem;">ح</div>
+                <div class="logo-text" style="font-size:1.1rem;">حلم <span>مصطفى</span></div>
+            </div>
+            <p class="footer-copy">© 2025 مسابقة حلم · جميع الحقوق محفوظة</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+                <a href="#" aria-label="TikTok">🎵</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SCRIPTS ============ -->
     <script>
-        // ================================================================
-        // OFFER LINKS (REPLACE WITH REAL URLS)
-        // ================================================================
-        const OFFERS = {
-            vault: 'https://vip.hotclips.com/vault',
-            live: 'https://live.hotclips.com/stage',
-            diamond: 'https://vip.hotclips.com/diamond'
-        };
+        // ---------- SCROLL REVEAL ----------
+        const reveals = document.querySelectorAll('.reveal');
 
-        function handleAction(action) {
-            const url = OFFERS[action];
-            if (!url) {
-                showToast('⚠️ UPDATE OFFER LINK: ' + action);
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // ---------- COUNTDOWN TIMER ----------
+        // target date: 15 August 2025 23:59:59
+        const targetDate = new Date('2025-08-15T23:59:59').getTime();
+
+        function updateTimer() {
+            const now = Date.now();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
                 return;
             }
-            if (navigator.vibrate) navigator.vibrate(15);
-            window.location.href = url;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
 
-        document.querySelectorAll('[data-action]').forEach(el => {
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const action = el.getAttribute('data-action');
-                handleAction(action);
-            });
-        });
+        updateTimer();
+        setInterval(updateTimer, 1000);
 
-        document.querySelectorAll('.vip-booth').forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.closest('button')) return;
-                const action = card.getAttribute('data-action');
-                if (action) handleAction(action);
-            });
-        });
-
-        function showToast(msg) {
-            const t = document.createElement('div');
-            t.innerText = msg;
-            Object.assign(t.style, {
-                position: 'fixed',
-                bottom: '24px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                background: 'rgba(20,0,15,0.92)',
-                border: '2px solid #ff00aa',
-                color: '#ff88dd',
-                padding: '12px 28px',
-                borderRadius: '60px',
-                fontSize: '0.7rem',
-                fontWeight: '700',
-                fontFamily: 'Orbitron, sans-serif',
-                letterSpacing: '1.5px',
-                boxShadow: '0 0 30px #ff00aa, 0 0 60px #ff0066',
-                zIndex: '9999',
-                textAlign: 'center',
-                animation: 'toastIn 0.3s ease'
-            });
-            document.body.appendChild(t);
-            setTimeout(() => {
-                t.style.opacity = '0';
-                t.style.transition = 'opacity 0.3s';
-                setTimeout(() => t.remove(), 300);
-            }, 2000);
-        }
-
-        // ================================================================
-        // FOOTER MODALS
-        // ================================================================
-        function showModal(title, msg) {
-            const overlay = document.createElement('div');
-            Object.assign(overlay.style, {
-                position: 'fixed',
-                inset: '0',
-                background: 'rgba(0,0,0,0.92)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: '10001',
-                padding: '20px',
-                animation: 'fadeIn 0.2s ease'
-            });
-
-            const box = document.createElement('div');
-            Object.assign(box.style, {
-                background: '#0d0008',
-                maxWidth: '320px',
-                width: '100%',
-                borderRadius: '48px',
-                padding: '1.8rem 1.5rem',
-                textAlign: 'center',
-                border: '2px solid #ff00aa',
-                boxShadow: '0 0 40px #ff00aa'
-            });
-
-            const h3 = document.createElement('h3');
-            h3.innerText = title;
-            Object.assign(h3.style, {
-                fontFamily: 'Orbitron, sans-serif',
-                fontSize: '1.1rem',
-                color: '#ff44aa',
-                marginBottom: '0.6rem'
-            });
-
-            const p = document.createElement('p');
-            p.innerText = msg;
-            Object.assign(p.style, {
-                color: '#c8a0bc',
-                fontSize: '0.8rem',
-                lineHeight: '1.6',
-                marginBottom: '1.5rem'
-            });
-
-            const btn = document.createElement('button');
-            btn.innerText = 'I UNDERSTAND';
-            Object.assign(btn.style, {
-                background: 'transparent',
-                border: '2px solid #ff00aa',
-                padding: '0.6rem 1.6rem',
-                borderRadius: '60px',
-                color: '#ff44aa',
-                fontWeight: '700',
-                fontSize: '0.6rem',
-                letterSpacing: '2.5px',
-                fontFamily: 'Orbitron, sans-serif',
-                cursor: 'pointer',
-                transition: 'all 0.3s'
-            });
-            btn.addEventListener('mouseenter', () => {
-                btn.style.background = '#ff00aa';
-                btn.style.color = '#0a0005';
-                btn.style.boxShadow = '0 0 30px #ff00aa';
-            });
-            btn.addEventListener('mouseleave', () => {
-                btn.style.background = 'transparent';
-                btn.style.color = '#ff44aa';
-                btn.style.boxShadow = 'none';
-            });
-            btn.addEventListener('click', () => {
-                overlay.style.opacity = '0';
-                overlay.style.transition = 'opacity 0.2s';
-                setTimeout(() => overlay.remove(), 200);
-            });
-
-            box.appendChild(h3);
-            box.appendChild(p);
-            box.appendChild(btn);
-            overlay.appendChild(box);
-            document.body.appendChild(overlay);
-            if (navigator.vibrate) navigator.vibrate(10);
-        }
-
-        // Inject keyframes
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = `
-            @keyframes toastIn {
-                0% { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(10px); }
-                100% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
-            }
-            @keyframes fadeIn {
-                0% { opacity: 0; }
-                100% { opacity: 1; }
-            }
-        `;
-        document.head.appendChild(styleSheet);
-
-        document.getElementById('footer2257')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            showModal('📜 2257', 'All models are 21+ and verified. Custodian: Pink Vice, 777 Redlight Ave.');
-        });
-        document.getElementById('footerTerms')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            showModal('🔞 AGE RESTRICTION', 'Strictly 21+. No minors allowed. Verification required.');
-        });
-        document.getElementById('footerPrivacy')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            showModal('🛡️ PRIVACY', 'Your session is ephemeral. No data stored. Discretion guaranteed.');
-        });
-
-        // ================================================================
-        // LIGHTWEIGHT PARTICLES (no connections, minimal count)
-        // ================================================================
-        const canvas = document.getElementById('particleCanvas');
-        const ctx = canvas.getContext('2d');
-        let w, h;
-        let particles = [];
-        const COUNT = 40; // very few
-
-        class Particle {
-            constructor() { this.reset(); }
-            reset() {
-                this.x = Math.random() * w;
-                this.y = Math.random() * h;
-                this.size = Math.random() * 2.5 + 1.2;
-                this.speedX = (Math.random() - 0.5) * 0.6;
-                this.speedY = (Math.random() - 0.5) * 0.6;
-                this.hue = Math.random() * 30 + 325;
-                this.alpha = Math.random() * 0.4 + 0.3;
-                this.pulse = Math.random() * Math.PI * 2;
-                this.pulseSpeed = 0.01 + Math.random() * 0.015;
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                this.pulse += this.pulseSpeed;
-                if (this.x < -20 || this.x > w + 20 || this.y < -20 || this.y > h + 20) {
-                    this.reset();
-                    this.x = Math.random() * w;
-                    this.y = Math.random() * h;
-                }
-            }
-            draw() {
-                const size = this.size + Math.sin(this.pulse) * 0.3;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
-                ctx.fillStyle = `hsl(${this.hue}, 100%, 70%)`;
-                ctx.globalAlpha = this.alpha;
-                ctx.fill();
-                ctx.globalAlpha = 1;
-            }
-        }
-
-        function resizeParticles() {
-            w = window.innerWidth;
-            h = window.innerHeight;
-            canvas.width = w;
-            canvas.height = h;
-            particles = [];
-            for (let i = 0; i < COUNT; i++) particles.push(new Particle());
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, w, h);
-            particles.forEach(p => { p.update(); p.draw(); });
-            requestAnimationFrame(animateParticles);
-        }
-
-        window.addEventListener('resize', resizeParticles);
-        resizeParticles();
-        animateParticles();
-
-        // ================================================================
-        // REVEAL CARDS WITH STAGGER (IntersectionObserver)
-        // ================================================================
-        const cards = document.querySelectorAll('.vip-booth');
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach((e, index) => {
-                if (e.isIntersecting) {
-                    const delay = Array.from(cards).indexOf(e.target) * 100;
-                    setTimeout(() => {
-                        e.target.style.opacity = '1';
-                        e.target.style.transform = 'translateY(0)';
-                    }, delay);
+        // ---------- SMOOTH SCROLL for nav links ----------
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        }, { threshold: 0.1 });
-
-        cards.forEach((c) => {
-            c.style.opacity = '0';
-            c.style.transform = 'translateY(30px)';
-            c.style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-            obs.observe(c);
         });
-
-        console.log('🔥 PINK VICE · Ultra‑light & smooth!');
     </script>
-    <script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
+<script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
 </body>
 </html>
