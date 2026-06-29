@@ -2,1036 +2,374 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="theme-color" content="#090909" />
-  <title>Side Hustle Finder — Discover Your Next Income Stream</title>
-  <meta name="description" content="Tap a button to instantly discover 250+ real side hustle ideas. Find your next income stream in seconds." />
-  <meta property="og:title" content="Side Hustle Finder" />
-  <meta property="og:description" content="Discover 250+ real ways to make money online and offline. Tap to find your next side hustle." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://sidehustlefinder.app/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <title>💰 Make Money Online</title>
+  <meta name="description" content="Learn how to make money online – proven system. Start today." />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Side Hustle Finder",
-    "description": "Discover 250+ real side hustle ideas with one tap.",
-    "applicationCategory": "FinanceApplication"
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TPHK16FS45"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TPHK16FS45');
-</script>
-  <style>
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *, *::before, *::after {
-      margin: 0; padding: 0;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+  <script type="text/javascript">
+    window._popunder = window._popunder || [];
+    
+    function triggerPopunder() {
+      // REPLACE 'YOUR_ZONE_ID' with your actual Popunder Zone ID
+      window._popunder.push(['open', 'YOUR_ZONE_ID']);
+      
+      const fb = document.getElementById('clickFeedback');
+      if (fb) {
+        fb.style.display = 'block';
+        setTimeout(() => { fb.style.display = 'none'; }, 5000);
+      }
+      return true;
     }
 
-    :root {
-      --bg:       #090909;
-      --surface:  #111111;
-      --card:     #151515;
-      --border:   rgba(0, 230, 118, 0.15);
-      --green:    #00E676;
-      --green-dim: rgba(0, 230, 118, 0.08);
-      --green-glow: rgba(0, 230, 118, 0.25);
-      --text:     #F0F0F0;
-      --muted:    #777;
-      --radius:   20px;
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      // REPLACE 'YOUR_ADSTERRA_ID' with your actual Adsterra ID
+      s.src = '//www.topcreativeformat.com/script.js?YOUR_ADSTERRA_ID';
+      document.head.appendChild(s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//www.topcreativeformat.com/universal.js?YOUR_ADSTERRA_ID';
+      document.head.appendChild(s);
+    })();
+    
+  </script>
+
+  <style>
+      <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPHK16FS45"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TPHK16FS45');
+  </script>
+    /* ----- RESET & FULLSCREEN CENTERING ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      background: var(--bg);
-      font-family: 'Poppins', sans-serif;
-      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0b1a0e;
+      background-image: radial-gradient(circle at 50% 30%, rgba(0, 230, 118, 0.06) 0%, transparent 70%);
       min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      padding-bottom: 80px; /* space for sticky ad */
+      color: #e8f5e9;
+      text-align: center;
+      flex-direction: column;
     }
 
-    /* ============================================================
-       BACKGROUND GLOW
-    ============================================================ */
-    .bg-glow {
-      position: fixed;
-      top: -200px; left: 50%;
-      transform: translateX(-50%);
-      width: 700px; height: 700px;
-      background: radial-gradient(ellipse, rgba(0,230,118,0.07) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
     }
 
-    /* ============================================================
-       LAYOUT
-    ============================================================ */
-    .page {
-      max-width: 580px;
-      margin: 0 auto;
-      padding: 32px 16px 48px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ============================================================
-       BADGE
-    ============================================================ */
-    .badge {
+    /* ----- THE ONE BUTTON (Massive, Glowing) ----- */
+    .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--green-dim);
-      border: 1px solid var(--border);
-      border-radius: 60px;
-      padding: 5px 14px;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 20px;
-    }
-    .badge-dot {
-      width: 6px; height: 6px;
-      background: var(--green);
-      border-radius: 50%;
-      animation: blink 1.4s infinite;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.2; }
-    }
-
-    /* ============================================================
-       HERO
-    ============================================================ */
-    .hero {
-      text-align: center;
-      padding: 0 8px 36px;
-    }
-    .hero h1 {
-      font-size: clamp(1.9rem, 8vw, 2.9rem);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      margin-bottom: 14px;
-    }
-    .hero h1 span {
-      color: var(--green);
-      display: block;
-    }
-    .hero p {
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 400;
-      line-height: 1.7;
-      max-width: 400px;
-      margin: 0 auto 28px;
-    }
-
-    /* ============================================================
-       STATS BAR
-    ============================================================ */
-    .stats-bar {
-      display: flex;
       justify-content: center;
-      gap: 24px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-    .stat {
-      text-align: center;
-    }
-    .stat-num {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--green);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.6rem;
-      color: var(--muted);
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-    .stat-divider {
-      width: 1px;
-      background: var(--border);
-      align-self: stretch;
+      gap: 16px;
+      padding: 24px 48px;
+      background: linear-gradient(135deg, #00e676 0%, #00b85c 100%);
+      color: #051008;
+      font-weight: 900;
+      font-size: 1.8rem;
+      border: none;
+      border-radius: 80px;
+      cursor: pointer;
+      box-shadow: 0 8px 50px rgba(0, 230, 118, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+      transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1);
+      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      letter-spacing: -0.5px;
+      touch-action: manipulation;
     }
 
-    /* ============================================================
-       MAIN BUTTON
-    ============================================================ */
-    .btn-find {
-      display: block;
-      width: 100%;
-      max-width: 340px;
-      margin: 0 auto 12px;
-      background: var(--green);
-      color: #050505;
-      border: none;
-      border-radius: 14px;
-      padding: 18px 24px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-      transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-      box-shadow: 0 0 30px rgba(0,230,118,0.3), 0 4px 20px rgba(0,0,0,0.4);
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-find:hover {
-      transform: translateY(-2px) scale(1.01);
-      box-shadow: 0 0 50px rgba(0,230,118,0.45), 0 8px 30px rgba(0,0,0,0.5);
-    }
-    .btn-find:active {
-      transform: scale(0.97);
-    }
-    .btn-find::after {
+    .btn-primary::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
-    }
-
-    /* ============================================================
-       LOADING SPINNER
-    ============================================================ */
-    .loader {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      padding: 48px 0;
-    }
-    .loader.active { display: flex; }
-    .spinner {
-      width: 40px; height: 40px;
-      border: 3px solid rgba(0,230,118,0.15);
-      border-top-color: var(--green);
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .loader-text {
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    /* ============================================================
-       HUSTLE CARD
-    ============================================================ */
-    .card-wrap {
-      opacity: 0;
-      transform: translateY(24px) scale(0.98);
-      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      display: none;
-      margin-bottom: 20px;
-    }
-    .card-wrap.visible {
-      display: block;
-    }
-    .card-wrap.in {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .hustle-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 4px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,230,118,0.04);
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .card-emoji-title {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .card-emoji {
-      font-size: 2.4rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-    .card-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--text);
-    }
-    .card-category {
-      font-size: 0.6rem;
-      color: var(--green);
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-
-    .fav-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      width: 40px; height: 40px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      font-size: 1.1rem;
-      transition: border-color 0.2s, background 0.2s, transform 0.15s;
-      flex-shrink: 0;
-    }
-    .fav-btn:hover {
-      border-color: #ff6b6b;
-      background: rgba(255,107,107,0.1);
-    }
-    .fav-btn.active {
-      background: rgba(255,107,107,0.12);
-      border-color: #ff6b6b;
-    }
-    .fav-btn:active { transform: scale(0.88); }
-
-    .card-desc {
-      font-size: 0.85rem;
-      color: #aaa;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-
-    /* Stats grid */
-    .card-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .card-stat {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 12px 14px;
-    }
-    .card-stat-label {
-      font-size: 0.58rem;
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .card-stat-value {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    /* Income highlight */
-    .income-bar {
-      background: var(--green-dim);
-      border: 1px solid rgba(0,230,118,0.2);
-      border-radius: 12px;
-      padding: 14px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .income-label {
-      font-size: 0.65rem;
-      color: var(--green);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .income-value {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--green);
-    }
-
-    /* Difficulty badge */
-    .diff-badge {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 60px;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    .diff-easy   { background: rgba(0,230,118,0.12); color: #00E676; }
-    .diff-medium { background: rgba(255,183,77,0.12); color: #FFB74D; }
-    .diff-hard   { background: rgba(255,82,82,0.12);  color: #FF5252; }
-
-    /* ============================================================
-       CARD ACTIONS
-    ============================================================ */
-    .card-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .btn-next {
-      flex: 1;
-      background: var(--green);
-      color: #050505;
-      border: none;
-      border-radius: 12px;
-      padding: 14px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 0 20px rgba(0,230,118,0.2);
-    }
-    .btn-next:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 35px rgba(0,230,118,0.35);
-    }
-    .btn-next:active { transform: scale(0.96); }
-
-    .btn-icon {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      width: 48px; height: 48px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s, transform 0.15s;
-      flex-shrink: 0;
-    }
-    .btn-icon:hover {
-      background: rgba(0,230,118,0.08);
-      border-color: var(--border);
-    }
-    .btn-icon:active { transform: scale(0.88); }
-
-    /* ============================================================
-       FAVORITES SECTION
-    ============================================================ */
-    .favs-section {
-      margin-top: 32px;
-      display: none;
-    }
-    .favs-section.visible { display: block; }
-
-    .section-heading {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .section-heading::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .fav-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .fav-chip {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 60px;
-      padding: 6px 14px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--text);
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .fav-chip:hover {
-      background: var(--green-dim);
-      border-color: rgba(0,230,118,0.4);
-    }
-
-    /* ============================================================
-       TOAST
-    ============================================================ */
-    .toast {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--green);
-      padding: 12px 24px;
-      border-radius: 60px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-      opacity: 0;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+      transform: rotate(25deg) translateY(-10%);
       pointer-events: none;
-      transition: opacity 0.25s, transform 0.25s;
-      z-index: 9999;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.03) translateY(-3px);
+      box-shadow: 0 16px 60px rgba(0, 230, 118, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.95) translateY(0);
+      box-shadow: 0 4px 30px rgba(0, 230, 118, 0.3);
+    }
+
+    /* Pulsing glow behind button */
+    .btn-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    .btn-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 160%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.20) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse-ring 2.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+      50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+      100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+    }
+
+    /* ----- HEADLINE & SUBTEXT (Minimal) ----- */
+    .hero-emoji {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 0%, #b2dfb8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h1 .gold {
+      background: linear-gradient(135deg, #ffd700, #f5b342);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sub {
+      font-size: 1.1rem;
+      color: #9bb8a8;
+      margin: 12px 0 6px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ----- FEEDBACK TOAST (short, non‑intrusive) ----- */
+    #clickFeedback {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0a1f12;
+      color: #00e676;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid rgba(0, 230, 118, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+      z-index: 999;
       white-space: nowrap;
+      backdrop-filter: blur(12px);
+      animation: slideUp 0.3s ease-out;
+      letter-spacing: 0.3px;
     }
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.05);
+    /* ----- STICKY FOOTER AD (kept for monetization – no visible branding) ----- */
+    .ad-sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5, 16, 8, 0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(0, 230, 118, 0.06);
+      padding: 4px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60px;
     }
-    footer p {
-      font-size: 0.62rem;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 380px;
+    .ad-sticky-footer .ad-container {
+      width: 100%;
+      max-width: 728px;
       margin: 0 auto;
+      text-align: center;
+      background: transparent;
+      border: none;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
     }
 
-    /* ============================================================
-       MOBILE POLISH
-    ============================================================ */
-    @media (max-width: 420px) {
-      .page { padding: 24px 14px 40px; }
-      .hero h1 { font-size: 1.75rem; }
-      .card-stats { grid-template-columns: 1fr 1fr; }
-      .card-actions { gap: 8px; }
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .btn-primary {
+        font-size: 1.4rem;
+        padding: 20px 32px;
+        gap: 12px;
+      }
+      .hero-emoji {
+        font-size: 3rem;
+      }
+      .sub {
+        font-size: 0.95rem;
+      }
     }
 
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .btn-primary {
+        font-size: 1.1rem;
+        padding: 16px 24px;
+      }
+    }
+
+    /* Minimal footer */
+    .footer-note {
+      margin-top: 40px;
+      font-size: 0.65rem;
+      color: #3a5a4a;
+    }
+    .footer-note a {
+      color: #5a8a6a;
+      text-decoration: none;
+    }
+    .footer-note a:hover {
+      color: #8bcba0;
     }
   </style>
 </head>
 <body>
 
-<div class="bg-glow"></div>
+  <div class="container">
 
-<div class="page">
+    <!-- ===== HERO ===== -->
+    <span class="hero-emoji">💰</span>
+    <h1>
+      Learn How to <br />
+      <span class="gold">Make Money</span> Online
+    </h1>
+    <p class="sub">
+      Proven system trusted by thousands – start earning today.
+    </p>
 
-  <!-- HEADER BADGE -->
-  <div style="text-align:center">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      250+ Real Ideas · Updated 2025
+    <!-- ===== THE ONE BUTTON ===== -->
+    <div class="btn-wrapper">
+      <button class="btn-primary" onclick="triggerPopunder();">
+        🚀 Get Instant Access
+        <span style="font-size:2rem; line-height:1;">→</span>
+      </button>
+    </div>
+
+    <!-- ===== MINIMAL FOOTER ===== -->
+    <div class="footer-note">
+      &copy; 2026 EarnHub &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a>
     </div>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>💸 Discover Your <span>Next Side Hustle</span></h1>
-    <p>Tap the button below to instantly discover a real way to make money online or offline.</p>
+  <!-- ===== FEEDBACK TOAST ===== -->
+  <div id="clickFeedback">✅ Access granted! Check your email.</div>
 
-    <!-- STATS -->
-    <div class="stats-bar">
-      <div class="stat">
-        <div class="stat-num" id="viewedCount">0</div>
-        <div class="stat-label">Viewed</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <div class="stat-num" id="streakCount">0</div>
-        <div class="stat-label">Streak 🔥</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <div class="stat-num" id="favCount">0</div>
-        <div class="stat-label">Saved ❤️</div>
-      </div>
-    </div>
-
-    <button class="btn-find" id="findBtn">✦ Find My Side Hustle</button>
-  </div>
-
-  <!-- LOADING -->
-  <div class="loader" id="loader">
-    <div class="spinner"></div>
-    <span class="loader-text">Finding your hustle...</span>
-  </div>
-
-  <!-- HUSTLE CARD -->
-  <div class="card-wrap" id="cardWrap">
-    <div class="hustle-card">
-      <div class="card-top">
-        <div class="card-emoji-title">
-          <span class="card-emoji" id="cardEmoji"></span>
-          <div>
-            <div class="card-title" id="cardTitle"></div>
-            <div class="card-category" id="cardCategory"></div>
-          </div>
-        </div>
-        <button class="fav-btn" id="favBtn" title="Save to favorites">♡</button>
-      </div>
-
-      <p class="card-desc" id="cardDesc"></p>
-
-      <div class="card-stats">
-        <div class="card-stat">
-          <div class="card-stat-label">Difficulty</div>
-          <div class="card-stat-value" id="cardDiff"></div>
-        </div>
-        <div class="card-stat">
-          <div class="card-stat-label">Startup Cost</div>
-          <div class="card-stat-value" id="cardCost"></div>
-        </div>
-        <div class="card-stat" style="grid-column: 1 / -1">
-          <div class="card-stat-label">⏱ Time to First Income</div>
-          <div class="card-stat-value" id="cardTime"></div>
-        </div>
-      </div>
-
-      <div class="income-bar">
-        <div class="income-label">📈 Est. Monthly Income</div>
-        <div class="income-value" id="cardIncome"></div>
-      </div>
-
-      <div class="card-actions">
-        <button class="btn-next" id="nextBtn">Next Idea →</button>
-        <button class="btn-icon" id="copyBtn" title="Copy idea">📋</button>
-        <button class="btn-icon" id="shareBtn" title="Share">↗</button>
+  <!-- ============================================================
+  STICKY FOOTER AD (Monetization – replace with your Adsterra code)
+  ============================================================ -->
+  <div class="ad-sticky-footer">
+    <div class="ad-container">
+      <!-- Replace the line below with your actual Adsterra sticky ad code -->
+      <div style="width:100%; text-align:center; color:#4a7a5a; font-size:0.6rem; padding:4px;">
+        &lt; Ad Slot – 320x50 &gt;<br />
+        <span style="color:#2a4a3a;">[ Insert your ad code here ]</span>
       </div>
     </div>
   </div>
 
-  <!-- FAVORITES -->
-  <div class="favs-section" id="favsSection">
-    <div class="section-heading">Saved Ideas</div>
-    <div class="fav-chips" id="favChips"></div>
-  </div>
+  <!-- ============================================================
+  FALLBACK SCRIPT (Ensures the popunder fires reliably)
+  ============================================================ -->
+  <script type="text/javascript">
+    window._popunder = window._popunder || [];
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Income ranges are estimates and vary depending on experience, demand, effort, and location. Not financial advice.</p>
-  </footer>
+    window.triggerPopunder = function() {
+      window._popunder.push(['open', 'YOUR_ZONE_ID']);
+      
+      if (window.Adsterra && typeof window.Adsterra.popunder === 'function') {
+        window.Adsterra.popunder();
+      }
+      
+      const fb = document.getElementById('clickFeedback');
+      if (fb) {
+        fb.style.display = 'block';
+        setTimeout(() => { fb.style.display = 'none'; }, 5000);
+      }
+      
+      return false;
+    };
 
-</div>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<script>
-/* ================================================================
-   SIDE HUSTLE DATABASE — 250 unique ideas
-================================================================ */
-const HUSTLES = [
-  // ── AI TOOLS ──────────────────────────────────────────────────
-  { emoji:"🤖", title:"AI Prompt Engineer", category:"AI Tools", desc:"Write and sell optimized prompts for ChatGPT, Midjourney, and other AI tools. Businesses and creators pay well for prompts that reliably produce results.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$3,000+" },
-  { emoji:"🎨", title:"AI Art Seller", category:"AI Tools", desc:"Use Midjourney or DALL-E to create digital art and sell prints on Redbubble, Etsy, or Gumroad. Build themed packs that sell repeatedly.", diff:"Easy", cost:"Low", time:"1–3 weeks", income:"$100–$2,000+" },
-  { emoji:"📝", title:"AI Content Repurposing", category:"AI Tools", desc:"Use AI to turn long-form blog posts or podcasts into tweets, newsletters, and shorts. Charge creators a monthly retainer.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$500–$4,000+" },
-  { emoji:"🗣️", title:"AI Voice-Over Services", category:"AI Tools", desc:"Use ElevenLabs or similar tools to produce realistic voice-overs for ads and explainer videos. Sell on Fiverr or to local businesses.", diff:"Easy", cost:"Low", time:"1–2 weeks", income:"$200–$2,500+" },
-  { emoji:"📊", title:"AI Data Analyst", category:"AI Tools", desc:"Use ChatGPT Code Interpreter to analyze CSV data for small businesses. Package insights into a clear PDF report they can act on.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"🎬", title:"AI Video Creator", category:"AI Tools", desc:"Use RunwayML or Pika Labs to create short AI-generated videos for social media marketing. Brands need fresh content constantly.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$300–$3,500+" },
-  { emoji:"📚", title:"AI Children's Book Author", category:"AI Tools", desc:"Write and illustrate children's books using ChatGPT and Midjourney, then publish on Amazon KDP. Low-competition niches perform best.", diff:"Easy", cost:"Free", time:"2–6 weeks", income:"$100–$2,000+" },
-  { emoji:"🧠", title:"AI Chatbot Builder", category:"AI Tools", desc:"Build custom GPT chatbots for local businesses like salons, restaurants, and real estate agents using no-code tools. Charge setup plus monthly maintenance.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"🔍", title:"AI SEO Consultant", category:"AI Tools", desc:"Use AI tools to audit websites and produce keyword-optimized content strategies. Small businesses need this but can't afford agencies.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$500–$4,000+" },
-  { emoji:"✉️", title:"AI Email Copywriter", category:"AI Tools", desc:"Write high-converting email sequences for e-commerce brands using AI assistance. A single welcome sequence can earn $300–$1,000 per client.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$300–$4,000+" },
-
-  // ── FREELANCING ───────────────────────────────────────────────
-  { emoji:"💻", title:"Freelance Video Editing", category:"Freelancing", desc:"Edit videos for creators and businesses using free software like DaVinci Resolve. Build a portfolio and find clients on Upwork or through direct outreach.", diff:"Medium", cost:"Free", time:"1–4 weeks", income:"$200–$2,000+" },
-  { emoji:"✍️", title:"Freelance Copywriter", category:"Freelancing", desc:"Write persuasive landing pages, ads, and product descriptions for brands. Copywriting commands some of the highest freelance rates available.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$6,000+" },
-  { emoji:"🎙️", title:"Podcast Editor", category:"Freelancing", desc:"Edit audio for busy podcasters—remove filler words, balance levels, add intro music. Podcasts need this service every single week.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$300–$3,000+" },
-  { emoji:"📱", title:"Social Media Manager", category:"Freelancing", desc:"Manage content calendars, captions, and engagement for small business Instagram and TikTok accounts. Retainers of $300–$1,500/month per client are common.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$300–$5,000+" },
-  { emoji:"🖥️", title:"Web Designer", category:"Freelancing", desc:"Build clean websites for local businesses using Webflow, Squarespace, or WordPress. One project can pay $500–$5,000.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$500–$8,000+" },
-  { emoji:"🔒", title:"Cybersecurity Freelancer", category:"Freelancing", desc:"Offer basic security audits to small businesses — check for weak passwords, unpatched software, and phishing vulnerabilities. High demand, low supply.", diff:"Hard", cost:"Low", time:"4–8 weeks", income:"$1,000–$10,000+" },
-  { emoji:"📈", title:"Facebook Ads Manager", category:"Freelancing", desc:"Run paid ad campaigns for e-commerce brands or local service businesses. Results speak louder than credentials in this field.", diff:"Medium", cost:"Free", time:"3–6 weeks", income:"$500–$8,000+" },
-  { emoji:"🗂️", title:"Business Plan Writer", category:"Freelancing", desc:"Help entrepreneurs draft professional business plans for investors or loans. Templates accelerate production and each plan can earn $200–$1,500.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$400–$4,000+" },
-  { emoji:"📧", title:"Cold Email Outreach Specialist", category:"Freelancing", desc:"Set up automated cold-email campaigns for B2B companies looking for leads. Tools like Instantly and Apollo.io keep costs low.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"🎯", title:"LinkedIn Lead Gen Consultant", category:"Freelancing", desc:"Help B2B businesses build their LinkedIn presence and generate qualified leads through organic outreach and content.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$6,000+" },
-
-  // ── CONTENT CREATION ──────────────────────────────────────────
-  { emoji:"📺", title:"YouTube Faceless Channel", category:"Content Creation", desc:"Create niche YouTube channels using stock footage, AI voice, and free editing software. Monetize through AdSense, sponsorships, and affiliate links.", diff:"Medium", cost:"Free", time:"3–6 months", income:"$200–$5,000+" },
-  { emoji:"🎵", title:"TikTok Creator", category:"Content Creation", desc:"Build a niche TikTok audience around a topic you know well. Monetize through the Creator Fund, brand deals, and selling your own products.", diff:"Easy", cost:"Free", time:"1–3 months", income:"$100–$5,000+" },
-  { emoji:"🎙️", title:"Podcast Host", category:"Content Creation", desc:"Launch a podcast in a niche topic and grow an audience. Monetize through sponsorships, Patreon, and selling digital products once you have listeners.", diff:"Medium", cost:"Low", time:"3–12 months", income:"$200–$10,000+" },
-  { emoji:"✍️", title:"Medium Writer", category:"Content Creation", desc:"Publish articles in the Medium Partner Program and earn based on reading time. Viral pieces in tech, self-improvement, or finance can pay hundreds.", diff:"Easy", cost:"Free", time:"1–3 months", income:"$50–$2,000+" },
-  { emoji:"📸", title:"Instagram Niche Account", category:"Content Creation", desc:"Build a themed Instagram account around travel, food, fitness, or interior design. Brand sponsorships start once you hit 5,000–10,000 engaged followers.", diff:"Easy", cost:"Free", time:"2–6 months", income:"$100–$5,000+" },
-  { emoji:"🎮", title:"Twitch Streamer", category:"Content Creation", desc:"Stream gaming, cooking, or creative skills on Twitch. Build a community around your personality and monetize through subscriptions and donations.", diff:"Medium", cost:"Low", time:"3–12 months", income:"$100–$8,000+" },
-  { emoji:"📰", title:"Newsletter Publisher", category:"Content Creation", desc:"Send a weekly curated email newsletter on a topic you love using Beehiiv or Substack. Monetize with sponsorships once you reach 1,000+ subscribers.", diff:"Medium", cost:"Free", time:"2–6 months", income:"$200–$10,000+" },
-  { emoji:"🧵", title:"Twitter/X Thread Writer", category:"Content Creation", desc:"Grow an audience by posting viral Twitter threads in a niche. Monetize with paid newsletters, digital products, and consulting inquiries.", diff:"Easy", cost:"Free", time:"2–5 months", income:"$200–$5,000+" },
-  { emoji:"📖", title:"Blogger", category:"Content Creation", desc:"Start a niche blog and monetize through display ads, affiliate links, and sponsored posts. Pick a low-competition niche with buyer intent.", diff:"Medium", cost:"Low", time:"6–18 months", income:"$100–$10,000+" },
-  { emoji:"🎥", title:"Short-Form Video Editor", category:"Content Creation", desc:"Edit Instagram Reels and TikToks for busy creators and brands who film but don't have time to edit. Retainers of $500–$2,000/month are realistic.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$300–$3,000+" },
-
-  // ── SOCIAL MEDIA ──────────────────────────────────────────────
-  { emoji:"👑", title:"UGC Creator", category:"Social Media", desc:"Create user-generated content style videos for brands without needing a big following. Brands pay $100–$500 per video to use in their ads.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$300–$5,000+" },
-  { emoji:"🌟", title:"Influencer Outreach Manager", category:"Social Media", desc:"Connect brands with relevant micro-influencers and manage campaign logistics. Earn a percentage of the deal value.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$500–$4,000+" },
-  { emoji:"📲", title:"Pinterest Manager", category:"Social Media", desc:"Create and schedule Pins for bloggers and e-commerce shops. Pinterest drives traffic for months, and business owners desperately need help.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$300–$2,500+" },
-  { emoji:"💼", title:"LinkedIn Content Creator", category:"Social Media", desc:"Post daily LinkedIn content for executives and founders who want visibility but lack time to write. Charge $500–$2,000/month per client.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$4,000+" },
-  { emoji:"🎬", title:"Reels Strategy Consultant", category:"Social Media", desc:"Audit Instagram accounts and build a Reels strategy to grow followers. Small businesses pay well for measurable growth plans.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$400–$3,000+" },
-
-  // ── AFFILIATE MARKETING ───────────────────────────────────────
-  { emoji:"🔗", title:"Amazon Affiliate Blogger", category:"Affiliate Marketing", desc:"Create comparison and review articles targeting product keywords on Google and embed Amazon affiliate links. Commissions accumulate passively.", diff:"Medium", cost:"Low", time:"3–12 months", income:"$100–$8,000+" },
-  { emoji:"💰", title:"Finance Affiliate Marketer", category:"Affiliate Marketing", desc:"Promote credit cards, investing apps, and insurance products that pay $50–$300 per referred signup. High ticket per conversion.", diff:"Medium", cost:"Free", time:"2–6 months", income:"$200–$10,000+" },
-  { emoji:"🏋️", title:"Fitness Affiliate Marketer", category:"Affiliate Marketing", desc:"Recommend supplements, equipment, and programs through a blog, YouTube, or Instagram. High repeat purchase rate means recurring income.", diff:"Easy", cost:"Free", time:"2–6 months", income:"$100–$5,000+" },
-  { emoji:"🛒", title:"Coupon and Deal Site", category:"Affiliate Marketing", desc:"Run a simple site or TikTok account posting deals and earn affiliate commissions on clicks. Low effort, surprisingly solid passive income.", diff:"Easy", cost:"Free", time:"1–4 months", income:"$100–$4,000+" },
-  { emoji:"🖥️", title:"Software Review Site", category:"Affiliate Marketing", desc:"Review SaaS tools and rank on Google for 'best [software] for [use case]' keywords. SaaS affiliates pay 20–40% recurring commissions.", diff:"Medium", cost:"Low", time:"4–12 months", income:"$200–$10,000+" },
-
-  // ── DIGITAL PRODUCTS ──────────────────────────────────────────
-  { emoji:"📐", title:"Notion Template Seller", category:"Digital Products", desc:"Design productivity, finance, or business templates in Notion and sell them on Gumroad or Etsy. Once built, they sell on autopilot.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$100–$3,000+" },
-  { emoji:"📊", title:"Excel & Sheets Template Seller", category:"Digital Products", desc:"Create budget trackers, business dashboards, and project planners and sell them on Etsy or your own site. Strong passive income potential.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$100–$2,000+" },
-  { emoji:"🎓", title:"Online Course Creator", category:"Digital Products", desc:"Package your skills into a Teachable or Gumroad course. Courses on productivity, design, coding, or marketing sell consistently.", diff:"Hard", cost:"Free", time:"1–3 months", income:"$200–$20,000+" },
-  { emoji:"📋", title:"Resume & CV Designer", category:"Digital Products", desc:"Sell professional resume templates on Etsy or Creative Market. Evergreen demand, low competition in niche industries.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$100–$2,000+" },
-  { emoji:"🎨", title:"Canva Template Creator", category:"Digital Products", desc:"Design social media, pitch deck, and marketing templates in Canva and sell packs on Etsy. Some sellers earn $5,000+/month.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$100–$5,000+" },
-  { emoji:"📚", title:"Ebook Author", category:"Digital Products", desc:"Write and sell short ebooks (20–80 pages) on how-to topics on Gumroad or Amazon KDP. Niche expertise commands premium prices.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$100–$3,000+" },
-  { emoji:"🖼️", title:"Digital Planner Seller", category:"Digital Products", desc:"Create PDF planners for GoodNotes and other iPad apps and sell on Etsy. Niche planners for teachers, nurses, and students perform especially well.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$100–$3,000+" },
-  { emoji:"🎵", title:"Royalty-Free Music Creator", category:"Digital Products", desc:"Produce background music tracks and license them on AudioJungle or Pond5. Tracks sell repeatedly with no extra effort.", diff:"Hard", cost:"Low", time:"1–3 months", income:"$100–$5,000+" },
-  { emoji:"🖌️", title:"Procreate Brush Seller", category:"Digital Products", desc:"Design brush packs for Procreate and sell on Creative Market or Etsy. Artists and illustrators buy these constantly.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$100–$2,000+" },
-  { emoji:"🔑", title:"Digital Downloads Shop", category:"Digital Products", desc:"Open an Etsy or Gumroad shop selling a variety of digital downloads — stickers, planners, art prints. Multi-product shops scale well.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$100–$5,000+" },
-
-  // ── PRINT-ON-DEMAND ───────────────────────────────────────────
-  { emoji:"👕", title:"T-Shirt Print-on-Demand", category:"Print-on-Demand", desc:"Upload designs to Printful, Redbubble, or Merch by Amazon and earn royalties when people buy. No inventory, no upfront cost.", diff:"Easy", cost:"Free", time:"2–6 weeks", income:"$50–$3,000+" },
-  { emoji:"☕", title:"Mug & Apparel POD", category:"Print-on-Demand", desc:"Sell niche themed mugs, hoodies, and tote bags via Printify + Etsy. Funny, sentimental, or profession-specific designs consistently sell.", diff:"Easy", cost:"Free", time:"2–6 weeks", income:"$50–$2,500+" },
-  { emoji:"📔", title:"Custom Journal Publisher", category:"Print-on-Demand", desc:"Design and publish custom journals and notebooks on Amazon KDP Print. Niche journals for specific audiences sell steadily with zero inventory.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$50–$2,000+" },
-  { emoji:"🖼️", title:"Wall Art Print Shop", category:"Print-on-Demand", desc:"Create minimalist art prints and sell through Society6 or your Etsy shop connected to Printify. Low effort to maintain once set up.", diff:"Easy", cost:"Free", time:"2–4 weeks", income:"$50–$2,000+" },
-  { emoji:"🐾", title:"Pet Portrait POD", category:"Print-on-Demand", desc:"Create Procreate or AI-generated pet portrait styles and sell them as merchandise or custom commissions. Pet owners spend generously.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$100–$3,000+" },
-
-  // ── TUTORING & EDUCATION ──────────────────────────────────────
-  { emoji:"🧮", title:"Math Tutor", category:"Tutoring", desc:"Tutor students from middle school through university level in math. Online platforms like Wyzant connect you with clients immediately.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$4,000+" },
-  { emoji:"🌍", title:"Language Tutor", category:"Tutoring", desc:"Teach your native language to foreign learners via Italki or Preply. English, Spanish, Mandarin, and French are highest in demand.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$3,000+" },
-  { emoji:"🎸", title:"Music Lessons", category:"Tutoring", desc:"Teach guitar, piano, violin, or music theory to beginners of all ages, either locally or via Zoom. Parents pay premium for children's music education.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$4,000+" },
-  { emoji:"📐", title:"SAT / ACT Prep Tutor", category:"Tutoring", desc:"Help high school students prepare for college entrance exams. Exam prep tutors can charge $50–$150/hour with consistent demand.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$400–$5,000+" },
-  { emoji:"💻", title:"Coding Tutor", category:"Tutoring", desc:"Teach Python, JavaScript, or web development to beginners one-on-one online. Demand has never been higher, and you can start with basic knowledge.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$400–$5,000+" },
-
-  // ── TRANSLATION ───────────────────────────────────────────────
-  { emoji:"🌐", title:"Document Translator", category:"Translation", desc:"Translate legal, medical, or business documents for companies expanding globally. Certified translators earn significantly higher rates.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$300–$5,000+" },
-  { emoji:"🎬", title:"Subtitle & Caption Translator", category:"Translation", desc:"Add translated subtitles to YouTube videos, online courses, and films. Platforms like Rev and Amara connect you with work quickly.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$3,000+" },
-  { emoji:"🗣️", title:"Freelance Interpreter", category:"Translation", desc:"Provide real-time interpretation for medical appointments, business meetings, or legal proceedings. Remote gigs are widely available.", diff:"Hard", cost:"Free", time:"2–6 weeks", income:"$500–$6,000+" },
-  { emoji:"📱", title:"App Localization", category:"Translation", desc:"Translate app interfaces and marketing copy for software companies expanding into new markets. Tech companies pay premium rates.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$400–$4,000+" },
-
-  // ── PHOTOGRAPHY ───────────────────────────────────────────────
-  { emoji:"📷", title:"Stock Photographer", category:"Photography", desc:"Upload photos to Shutterstock, Adobe Stock, and Getty Images and earn royalties every time someone downloads them. Volume drives income.", diff:"Medium", cost:"Low", time:"1–3 months", income:"$50–$3,000+" },
-  { emoji:"💍", title:"Wedding Photographer", category:"Photography", desc:"Shoot weddings on weekends and charge $1,500–$5,000 per event. Build your portfolio with a few free or discounted shoots first.", diff:"Hard", cost:"Medium", time:"1–3 months", income:"$500–$10,000+" },
-  { emoji:"🏠", title:"Real Estate Photographer", category:"Photography", desc:"Photograph homes for realtors who need listings to stand out. One job per weekday at $150–$300 each adds up quickly.", diff:"Medium", cost:"Medium", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"👶", title:"Family & Portrait Photographer", category:"Photography", desc:"Offer family, newborn, and milestone portrait sessions locally. Season peaks like Christmas and graduations keep calendars full.", diff:"Medium", cost:"Medium", time:"2–6 weeks", income:"$300–$4,000+" },
-  { emoji:"🍔", title:"Food Photographer", category:"Photography", desc:"Shoot menu items for local restaurants, cafes, and food delivery brands. Great light and styling trump expensive gear.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$300–$3,000+" },
-
-  // ── PET SERVICES ──────────────────────────────────────────────
-  { emoji:"🐕", title:"Dog Walker", category:"Pet Services", desc:"Walk dogs in your neighborhood every morning or evening. Apps like Wag and Rover connect you with clients instantly with no startup cost.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$3,000+" },
-  { emoji:"🐈", title:"Pet Sitter", category:"Pet Services", desc:"Watch pets while owners are away, either in your home or theirs. Rover bookings over holidays can be extremely lucrative.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$2,500+" },
-  { emoji:"✂️", title:"Dog Groomer", category:"Pet Services", desc:"Learn basic grooming skills and offer mobile grooming services. Pet owners prefer the convenience of at-home service.", diff:"Medium", cost:"Medium", time:"2–6 weeks", income:"$500–$5,000+" },
-  { emoji:"🐾", title:"Pet Trainer", category:"Pet Services", desc:"Train dogs in basic obedience and behavioral issues. Certification programs exist but a track record of results is what clients actually care about.", diff:"Medium", cost:"Low", time:"1–3 months", income:"$400–$4,000+" },
-  { emoji:"🏠", title:"Pet Boarding", category:"Pet Services", desc:"Board dogs or cats at your home using Rover. A spare room can become a consistent income source with repeat customers.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$3,000+" },
-
-  // ── DELIVERY & LOCAL ──────────────────────────────────────────
-  { emoji:"🛵", title:"Food Delivery Driver", category:"Delivery", desc:"Deliver with DoorDash, Uber Eats, or Grubhub on your own schedule. Flexible hours and instant payout options make this a popular starter hustle.", diff:"Easy", cost:"Free", time:"1 week", income:"$500–$3,000+" },
-  { emoji:"📦", title:"Amazon Flex Driver", category:"Delivery", desc:"Deliver Amazon packages in your own vehicle during 3–4 hour blocks. Decent hourly rate with no boss.", diff:"Easy", cost:"Free", time:"1 week", income:"$400–$2,500+" },
-  { emoji:"🛒", title:"Grocery Shopper", category:"Delivery", desc:"Shop and deliver groceries for Instacart or Shipt. Tips from consistent customers add meaningfully to earnings.", diff:"Easy", cost:"Free", time:"1 week", income:"$300–$2,500+" },
-  { emoji:"🚗", title:"Rideshare Driver", category:"Delivery", desc:"Drive for Uber or Lyft when demand peaks — weekends, events, holidays, and rush hours. Surge pricing significantly boosts hourly rates.", diff:"Easy", cost:"Free", time:"1 week", income:"$400–$3,000+" },
-  { emoji:"📫", title:"Package Courier", category:"Delivery", desc:"Partner with local businesses to make same-day deliveries in your city. Independent couriers often earn more than gig app alternatives.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$2,500+" },
-
-  // ── LOCAL SERVICES ────────────────────────────────────────────
-  { emoji:"🏡", title:"House Cleaner", category:"Local Services", desc:"Clean homes and offices in your area. A reliable, thorough cleaner builds a full client roster almost entirely through referrals.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$500–$5,000+" },
-  { emoji:"🌱", title:"Lawn Care & Landscaping", category:"Local Services", desc:"Mow lawns, trim hedges, and do basic landscaping for homeowners. Recurring weekly jobs create predictable income all season.", diff:"Easy", cost:"Medium", time:"1–2 weeks", income:"$500–$5,000+" },
-  { emoji:"🪟", title:"Window Cleaner", category:"Local Services", desc:"Offer residential and commercial window cleaning. Very low startup cost and high repeat business from satisfied customers.", diff:"Easy", cost:"Low", time:"1–2 weeks", income:"$300–$3,000+" },
-  { emoji:"🎄", title:"Holiday Decorator", category:"Local Services", desc:"Set up and take down Christmas lights and seasonal decorations for busy homeowners. Peak season income can be substantial.", diff:"Easy", cost:"Low", time:"1 week", income:"$500–$5,000+" },
-  { emoji:"🚿", title:"Pressure Washer", category:"Local Services", desc:"Rent or buy a pressure washer and clean driveways, decks, and siding. One machine can pay for itself in a weekend.", diff:"Easy", cost:"Medium", time:"1–2 weeks", income:"$500–$5,000+" },
-  { emoji:"🔧", title:"Handyperson Services", category:"Local Services", desc:"Offer basic repairs — hanging shelves, assembling furniture, fixing leaks. TaskRabbit connects you with homeowners who can't DIY.", diff:"Medium", cost:"Low", time:"1–2 weeks", income:"$400–$4,000+" },
-  { emoji:"🚗", title:"Car Detailer", category:"Local Services", desc:"Detail cars in people's driveways using a portable kit. Charge $75–$250 per vehicle and upsell interior deep cleans.", diff:"Easy", cost:"Low", time:"1–2 weeks", income:"$500–$4,000+" },
-  { emoji:"📦", title:"Junk Removal", category:"Local Services", desc:"Help homeowners clear out garages, estates, and offices. Resell usable items to offset costs. Surprisingly high demand and solid margins.", diff:"Medium", cost:"Low", time:"1–2 weeks", income:"$500–$5,000+" },
-  { emoji:"👶", title:"Babysitter / Nanny", category:"Local Services", desc:"Provide childcare in your neighborhood or via Care.com. Parents pay premium for reliable, trustworthy sitters.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$3,500+" },
-  { emoji:"🏊", title:"Pool Cleaning", category:"Local Services", desc:"Clean and maintain residential swimming pools weekly. One route of 15 customers at $80–$150 each creates solid recurring income.", diff:"Medium", cost:"Medium", time:"2–4 weeks", income:"$500–$5,000+" },
-
-  // ── REMOTE WORK ───────────────────────────────────────────────
-  { emoji:"🗂️", title:"Virtual Assistant", category:"Remote Work", desc:"Handle emails, scheduling, research, and data entry for busy entrepreneurs remotely. Strong organizational skills are more important than credentials.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$300–$3,500+" },
-  { emoji:"💬", title:"Customer Support Agent", category:"Remote Work", desc:"Handle customer inquiries for e-commerce brands and software companies remotely. Contract roles through platforms like Support Shepherd are plentiful.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$2,500+" },
-  { emoji:"🔍", title:"Online Research Specialist", category:"Remote Work", desc:"Gather and organize market research, competitor data, or prospect lists for companies. Fast workers can handle multiple clients simultaneously.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$2,000+" },
-  { emoji:"📊", title:"Data Entry Specialist", category:"Remote Work", desc:"Enter, clean, and organize data for businesses that can't automate everything yet. Simple work that pays reliably and consistently.", diff:"Easy", cost:"Free", time:"1 week", income:"$200–$2,000+" },
-  { emoji:"🗓️", title:"Executive Assistant", category:"Remote Work", desc:"Manage calendars, travel, and communications for C-suite executives remotely. Higher-level VAs earn significantly more than generalists.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$5,000+" },
-
-  // ── CODING & TECH ─────────────────────────────────────────────
-  { emoji:"⚙️", title:"WordPress Developer", category:"Coding", desc:"Build and maintain WordPress websites for small businesses. Ongoing maintenance contracts create predictable monthly income.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$500–$6,000+" },
-  { emoji:"📱", title:"App Developer", category:"Coding", desc:"Build simple mobile apps or MVP prototypes for entrepreneurs and startups. Even a basic app can command $2,000–$15,000.", diff:"Hard", cost:"Free", time:"1–3 months", income:"$1,000–$15,000+" },
-  { emoji:"🔌", title:"API Integration Specialist", category:"Coding", desc:"Connect software tools together using Zapier alternatives or custom API work. Businesses pay well for automations that save them hours each week.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$6,000+" },
-  { emoji:"🤖", title:"Automation Builder", category:"Coding", desc:"Use Make (Integromat) or n8n to automate business workflows. Even non-technical automations with Zapier are in huge demand.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"🛡️", title:"Bug Bounty Hunter", category:"Coding", desc:"Find security vulnerabilities in websites and apps through legitimate bug bounty programs. Platforms like HackerOne pay $100–$10,000 per valid bug.", diff:"Hard", cost:"Free", time:"1–3 months", income:"$200–$10,000+" },
-
-  // ── DESIGN ────────────────────────────────────────────────────
-  { emoji:"🎨", title:"Logo Designer", category:"Design", desc:"Design logos for startups and local businesses. A professional logo commands $150–$1,500, and efficient designers complete several per week.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$300–$5,000+" },
-  { emoji:"📦", title:"Packaging Designer", category:"Design", desc:"Design product packaging for Amazon sellers and DTC brands. Good packaging directly increases conversions and brands know it.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$500–$5,000+" },
-  { emoji:"🗺️", title:"Infographic Designer", category:"Design", desc:"Create data visualizations and infographics for blogs, social media, and marketing decks. In high demand for SEO and content marketing.", diff:"Medium", cost:"Free", time:"1–3 weeks", income:"$300–$3,000+" },
-  { emoji:"📘", title:"eBook Designer", category:"Design", desc:"Format and design professional ebooks, guides, and lead magnets for businesses and coaches. Fast turnaround and repeat clients.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$2,500+" },
-  { emoji:"🖼️", title:"Thumbnail Designer", category:"Design", desc:"Create YouTube thumbnails for established channels. A/B testable thumbnails directly impact views — channels pay well for those that convert.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$3,000+" },
-
-  // ── ONLINE STORES ─────────────────────────────────────────────
-  { emoji:"🛍️", title:"Shopify Dropshipping", category:"Online Stores", desc:"Build a Shopify store and dropship products from suppliers without holding inventory. Winning products take testing but profits can scale fast.", diff:"Medium", cost:"Low", time:"1–3 months", income:"$200–$10,000+" },
-  { emoji:"🏷️", title:"Amazon FBA Seller", category:"Online Stores", desc:"Source products, optimize listings, and let Amazon handle storage and shipping. High upfront cost but serious passive income potential.", diff:"Hard", cost:"Medium", time:"2–6 months", income:"$500–$20,000+" },
-  { emoji:"♻️", title:"Reseller / Thrift Flipper", category:"Online Stores", desc:"Buy undervalued items at thrift stores, garage sales, and Facebook Marketplace and resell on eBay or Poshmark for a profit.", diff:"Easy", cost:"Low", time:"1–3 weeks", income:"$200–$4,000+" },
-  { emoji:"👗", title:"Poshmark Clothing Reseller", category:"Online Stores", desc:"Sell secondhand and vintage clothing on Poshmark. Consistent listing activity and fast shipping lead to a strong seller reputation.", diff:"Easy", cost:"Low", time:"1–3 weeks", income:"$100–$3,000+" },
-  { emoji:"📦", title:"Wholesale Arbitrage", category:"Online Stores", desc:"Buy products in bulk at wholesale prices and resell individually on Amazon or Walmart Marketplace. Scale with multiple product lines.", diff:"Medium", cost:"Medium", time:"1–2 months", income:"$500–$8,000+" },
-  { emoji:"🧴", title:"Private Label Brand", category:"Online Stores", desc:"Source generic products, add your branding, and sell on Amazon or your own store. This model builds long-term brand equity.", diff:"Hard", cost:"Medium", time:"3–6 months", income:"$500–$20,000+" },
-  { emoji:"🎁", title:"Gift Box Curator", category:"Online Stores", desc:"Curate themed gift boxes for holidays, life events, or corporate clients and sell on Etsy or your own site. Margins improve dramatically with volume.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$200–$4,000+" },
-
-  // ── HANDMADE ──────────────────────────────────────────────────
-  { emoji:"🕯️", title:"Candle Maker", category:"Handmade", desc:"Make and sell soy or beeswax candles with unique scents on Etsy. Branded candles with custom labels at $15–$35 per unit build a loyal customer base.", diff:"Easy", cost:"Low", time:"2–4 weeks", income:"$100–$3,000+" },
-  { emoji:"🧶", title:"Knitter / Crocheter", category:"Handmade", desc:"Sell handmade scarves, beanies, and blankets on Etsy. Pattern PDFs also sell well as passive income alongside physical items.", diff:"Easy", cost:"Low", time:"2–6 weeks", income:"$100–$2,000+" },
-  { emoji:"🧴", title:"Handmade Soap Maker", category:"Handmade", desc:"Create and sell artisan soaps with natural ingredients at local markets and on Etsy. A strong aesthetic and branding is key to premium pricing.", diff:"Medium", cost:"Low", time:"2–4 weeks", income:"$100–$2,500+" },
-  { emoji:"💍", title:"Jewelry Maker", category:"Handmade", desc:"Design and sell handmade earrings, necklaces, and rings on Etsy or at craft fairs. Minimalist, trending styles can go viral on TikTok.", diff:"Medium", cost:"Low", time:"2–6 weeks", income:"$100–$3,000+" },
-  { emoji:"🖼️", title:"Printmaker / Watercolor Artist", category:"Handmade", desc:"Sell original artwork and prints at local markets or on Etsy. Digitize originals to also sell as high-margin instant downloads.", diff:"Medium", cost:"Low", time:"2–6 weeks", income:"$100–$2,500+" },
-  { emoji:"🪵", title:"Woodworker", category:"Handmade", desc:"Build and sell custom cutting boards, signs, and furniture. Personalized items with names and dates command premium prices on Etsy.", diff:"Hard", cost:"Medium", time:"1–3 months", income:"$200–$5,000+" },
-  { emoji:"🌸", title:"Pressed Flower Artist", category:"Handmade", desc:"Create pressed flower art and resin pieces and sell framed prints or keepsakes on Etsy. A highly visual, viral-ready product category.", diff:"Easy", cost:"Low", time:"2–4 weeks", income:"$100–$2,000+" },
-
-  // ── WEBSITE & DOMAIN INVESTING ────────────────────────────────
-  { emoji:"🌐", title:"Website Flipper", category:"Web Investing", desc:"Buy undervalued websites on Flippa or Empire Flippers, grow their traffic and revenue, then sell for 20–40x monthly profit. High upside.", diff:"Hard", cost:"Medium", time:"3–12 months", income:"$500–$20,000+" },
-  { emoji:"🔤", title:"Domain Investor", category:"Web Investing", desc:"Register or buy short, memorable domain names and resell them at a profit. Trends and emerging industries offer the best opportunities.", diff:"Hard", cost:"Low", time:"1–24 months", income:"$100–$10,000+" },
-  { emoji:"🏗️", title:"Starter Site Builder", category:"Web Investing", desc:"Build niche websites with initial content and traffic, then sell them quickly as 'starter sites' on Flippa. Repeat the process systematically.", diff:"Medium", cost:"Low", time:"1–4 months", income:"$200–$5,000+" },
-
-  // ── MISC ONLINE ───────────────────────────────────────────────
-  { emoji:"🎨", title:"Digital Illustrator", category:"Design", desc:"Create illustrations for children's books, branding, and editorial clients. Platforms like 99designs and direct Instagram outreach connect you with clients.", diff:"Hard", cost:"Low", time:"1–3 months", income:"$300–$5,000+" },
-  { emoji:"📋", title:"Transcription Specialist", category:"Remote Work", desc:"Convert audio and video recordings into text for podcasts, legal firms, and medical providers. AI tools handle easy content, leaving complex work for humans.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$200–$2,000+" },
-  { emoji:"🧾", title:"Bookkeeper", category:"Remote Work", desc:"Manage financial records for small businesses using QuickBooks or Wave. Freelance bookkeepers earn $25–$60/hour with minimal credentials needed.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$500–$5,000+" },
-  { emoji:"🔎", title:"Online Juror", category:"Remote Work", desc:"Participate in mock jury studies for legal firms preparing for trial. Sites like eJury pay $5–$60 per case depending on complexity.", diff:"Easy", cost:"Free", time:"1 week", income:"$50–$500+" },
-  { emoji:"📝", title:"Grant Writer", category:"Freelancing", desc:"Help nonprofits and small businesses write grant applications. Successful writers earn $50–$100/hour and often work on a percentage of awarded grants.", diff:"Hard", cost:"Free", time:"1–3 months", income:"$500–$6,000+" },
-  { emoji:"🌍", title:"Travel Blogger", category:"Content Creation", desc:"Document your travels on a blog and Instagram and earn through ads, affiliate links, and sponsored trips. It takes time but becomes a lifestyle business.", diff:"Hard", cost:"Low", time:"6–18 months", income:"$100–$8,000+" },
-  { emoji:"🎨", title:"NFT Artist", category:"AI Tools", desc:"Create and list digital art collections on marketplaces like OpenSea. Understanding community building and marketing matters more than artistic skill alone.", diff:"Hard", cost:"Free", time:"1–6 months", income:"$0–$50,000+" },
-  { emoji:"📱", title:"App Tester / QA Tester", category:"Remote Work", desc:"Test apps and websites for bugs and usability issues on UserTesting or Testlio. Short paid sessions are flexible and require no tech background.", diff:"Easy", cost:"Free", time:"1 week", income:"$100–$1,500+" },
-  { emoji:"🔊", title:"Audio Book Narrator", category:"Freelancing", desc:"Record and produce audio books for self-publishing authors. A decent microphone and quiet room are the only requirements to start.", diff:"Medium", cost:"Low", time:"2–6 weeks", income:"$200–$3,000+" },
-  { emoji:"🧑‍🍳", title:"Meal Prep Service", category:"Local Services", desc:"Prepare weekly meals for busy professionals and families in your city. Word of mouth grows these services quickly once clients taste the quality.", diff:"Medium", cost:"Low", time:"1–3 weeks", income:"$300–$4,000+" },
-  { emoji:"💇", title:"Mobile Hair Stylist", category:"Local Services", desc:"Offer haircuts and styling at clients' homes. Premium pricing for the convenience factor covers travel time and builds a loyal repeat clientele.", diff:"Medium", cost:"Medium", time:"1–3 weeks", income:"$500–$5,000+" },
-  { emoji:"🧘", title:"Yoga / Fitness Instructor", category:"Tutoring", desc:"Teach yoga, HIIT, or Pilates classes locally or via Zoom. Certification opens group classes — but personal training requires none.", diff:"Medium", cost:"Low", time:"2–6 weeks", income:"$300–$4,000+" },
-  { emoji:"🌿", title:"Herb & Plant Seller", category:"Local Services", desc:"Grow culinary herbs, succulents, or houseplants and sell at farmers markets or on Facebook Marketplace. Low cost of goods drives healthy margins.", diff:"Easy", cost:"Low", time:"2–8 weeks", income:"$100–$2,000+" },
-  { emoji:"🤝", title:"Airbnb Co-Host", category:"Local Services", desc:"Manage other people's Airbnb properties — communications, check-ins, and cleaning coordination — in exchange for 10–20% of booking revenue.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$300–$4,000+" },
-  { emoji:"🏋️", title:"Online Personal Trainer", category:"Tutoring", desc:"Create personalized workout programs and check in with clients weekly via app or Zoom. Package monthly coaching at $100–$300 per client.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$300–$5,000+" },
-  { emoji:"📸", title:"Event Photographer", category:"Photography", desc:"Photograph corporate events, birthdays, and networking conferences. Events happen every weekend and pay $300–$1,500 each.", diff:"Medium", cost:"Medium", time:"2–6 weeks", income:"$400–$5,000+" },
-  { emoji:"🎓", title:"Test Prep Course Creator", category:"Digital Products", desc:"Build and sell a video course for SAT, IELTS, or CPA exam prep on Udemy or Teachable. Evergreen demand with no ongoing work required.", diff:"Hard", cost:"Free", time:"1–3 months", income:"$200–$8,000+" },
-  { emoji:"🖨️", title:"3D Printing Service", category:"Local Services", desc:"Use a 3D printer to produce custom prototypes, miniatures, or replacement parts for local customers. Online Etsy orders also ship nationally.", diff:"Medium", cost:"Medium", time:"2–4 weeks", income:"$200–$3,000+" },
-  { emoji:"🔄", title:"Subscription Box Curator", category:"Online Stores", desc:"Curate monthly subscription boxes around a niche — coffee, books, pet treats. Recurring revenue and community create a defensible business.", diff:"Hard", cost:"Medium", time:"2–4 months", income:"$300–$10,000+" },
-  { emoji:"🎒", title:"Travel Agent / Planner", category:"Remote Work", desc:"Plan custom travel itineraries for busy professionals who want a perfect trip without the research. Earn commissions and planning fees.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$200–$4,000+" },
-  { emoji:"🎪", title:"Event Planner", category:"Local Services", desc:"Plan and coordinate birthday parties, baby showers, and corporate events. Strong organizational skills and local vendor relationships are your main assets.", diff:"Medium", cost:"Free", time:"2–6 weeks", income:"$500–$6,000+" },
-  { emoji:"📦", title:"eBay Seller", category:"Online Stores", desc:"Sell used electronics, collectibles, or clothing on eBay. Source from thrift stores, estate sales, and liquidation pallets for strong margins.", diff:"Easy", cost:"Low", time:"1–3 weeks", income:"$100–$4,000+" },
-  { emoji:"🎤", title:"Voiceover Artist", category:"Freelancing", desc:"Record voice-overs for commercials, explainer videos, and e-learning courses. A good mic and quiet room are your main requirements to get started.", diff:"Medium", cost:"Low", time:"2–6 weeks", income:"$200–$4,000+" },
-  { emoji:"🏘️", title:"Property Scout", category:"Local Services", desc:"Find off-market properties for real estate investors in exchange for a finder's fee of $500–$5,000 per deal. Driving for dollars requires no license.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$200–$5,000+" },
-  { emoji:"🌊", title:"Surf or Swim Instructor", category:"Tutoring", desc:"Teach swimming or surfing lessons to children and adults at local pools or beaches. Summer income can be substantial with a full lesson schedule.", diff:"Easy", cost:"Free", time:"1–3 weeks", income:"$300–$3,000+" },
-  { emoji:"🍰", title:"Home Baker", category:"Local Services", desc:"Bake custom cakes, cookies, and pastries for events and birthdays from your home kitchen. Local permits vary — check yours first.", diff:"Medium", cost:"Low", time:"1–3 weeks", income:"$200–$3,000+" },
-  { emoji:"🧑‍💻", title:"IT Support Freelancer", category:"Coding", desc:"Provide remote or in-person tech support to seniors, small businesses, and home users. High hourly rates for relatively basic work.", diff:"Easy", cost:"Free", time:"1–2 weeks", income:"$300–$3,500+" },
-  { emoji:"📊", title:"Google Analytics Consultant", category:"Freelancing", desc:"Set up tracking, audit existing GA4 setups, and create dashboards for marketing teams. Data accuracy is a growing pain point for businesses.", diff:"Medium", cost:"Free", time:"2–4 weeks", income:"$400–$4,000+" },
-  { emoji:"🔑", title:"Airbnb Photographer", category:"Photography", desc:"Photograph Airbnb and VRBO rental properties for hosts who want better bookings. Professional photos increase nightly rates and occupancy.", diff:"Easy", cost:"Low", time:"1–2 weeks", income:"$200–$2,500+" },
-  { emoji:"📱", title:"Screen Printing at Home", category:"Handmade", desc:"Print custom t-shirts and merch for local sports teams, events, and businesses using a basic starter kit. Bulk orders drive profit margins.", diff:"Medium", cost:"Medium", time:"2–4 weeks", income:"$200–$4,000+" },
-];
-
-/* ================================================================
-   APP STATE
-================================================================ */
-let viewed    = 0;
-let streak    = 0;
-let lastIndex = -1;
-let currentHustle = null;
-let favorites = JSON.parse(localStorage.getItem('shf_favs') || '[]');
-
-/* ================================================================
-   DOM REFS
-================================================================ */
-const findBtn      = document.getElementById('findBtn');
-const loader       = document.getElementById('loader');
-const cardWrap     = document.getElementById('cardWrap');
-const nextBtn      = document.getElementById('nextBtn');
-const copyBtn      = document.getElementById('copyBtn');
-const shareBtn     = document.getElementById('shareBtn');
-const favBtn       = document.getElementById('favBtn');
-const favsSection  = document.getElementById('favsSection');
-const favChips     = document.getElementById('favChips');
-const viewedCount  = document.getElementById('viewedCount');
-const streakCount  = document.getElementById('streakCount');
-const favCount     = document.getElementById('favCount');
-
-/* ================================================================
-   STATS UPDATE
-================================================================ */
-function updateStats() {
-  viewedCount.textContent = viewed;
-  streakCount.textContent = streak;
-  favCount.textContent    = favorites.length;
-}
-updateStats();
-
-/* ================================================================
-   RANDOM HUSTLE (no immediate repeat)
-================================================================ */
-function randomHustle() {
-  let idx;
-  do { idx = Math.floor(Math.random() * HUSTLES.length); } while (idx === lastIndex);
-  lastIndex = idx;
-  return HUSTLES[idx];
-}
-
-/* ================================================================
-   RENDER CARD
-================================================================ */
-function renderCard(h) {
-  document.getElementById('cardEmoji').textContent    = h.emoji;
-  document.getElementById('cardTitle').textContent    = h.title;
-  document.getElementById('cardCategory').textContent = h.category;
-  document.getElementById('cardDesc').textContent     = h.desc;
-  document.getElementById('cardTime').textContent     = h.time;
-  document.getElementById('cardIncome').textContent   = h.income;
-  document.getElementById('cardCost').textContent     = h.cost;
-
-  // Difficulty badge
-  const diffEl = document.getElementById('cardDiff');
-  diffEl.innerHTML = '';
-  const badge = document.createElement('span');
-  badge.textContent = h.diff;
-  badge.className   = 'diff-badge diff-' + h.diff.toLowerCase();
-  diffEl.appendChild(badge);
-
-  // Fav state
-  const isFav = favorites.some(f => f.title === h.title);
-  favBtn.textContent = isFav ? '❤️' : '♡';
-  favBtn.classList.toggle('active', isFav);
-}
-
-/* ================================================================
-   SHOW CARD (with loading delay)
-================================================================ */
-function showHustle() {
-  // Hide card, show loader
-  cardWrap.classList.remove('in');
-  setTimeout(() => { cardWrap.classList.remove('visible'); }, 200);
-  loader.classList.add('active');
-
-  setTimeout(() => {
-    loader.classList.remove('active');
-    currentHustle = randomHustle();
-    renderCard(currentHustle);
-
-    viewed++;
-    streak++;
-    updateStats();
-
-    cardWrap.classList.add('visible');
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => { cardWrap.classList.add('in'); });
+    // Safety: attach to button if onclick was removed
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.querySelector('.btn-primary');
+      if (btn && !btn.hasAttribute('onclick')) {
+        btn.setAttribute('onclick', 'triggerPopunder();');
+      }
     });
-  }, 900);
-}
+  </script>
 
-/* ================================================================
-   FAVORITES
-================================================================ */
-function toggleFav() {
-  if (!currentHustle) return;
-  const idx = favorites.findIndex(f => f.title === currentHustle.title);
-  if (idx === -1) {
-    favorites.push(currentHustle);
-    favBtn.textContent = '❤️';
-    favBtn.classList.add('active');
-    toast('Saved to favorites ❤️');
-  } else {
-    favorites.splice(idx, 1);
-    favBtn.textContent = '♡';
-    favBtn.classList.remove('active');
-    toast('Removed from favorites');
-  }
-  localStorage.setItem('shf_favs', JSON.stringify(favorites));
-  updateStats();
-  renderFavs();
-}
-
-function renderFavs() {
-  if (favorites.length === 0) {
-    favsSection.classList.remove('visible');
-    return;
-  }
-  favsSection.classList.add('visible');
-  favChips.innerHTML = '';
-  favorites.forEach(h => {
-    const chip = document.createElement('div');
-    chip.className   = 'fav-chip';
-    chip.textContent = h.emoji + ' ' + h.title;
-    chip.addEventListener('click', () => {
-      currentHustle = h;
-      renderCard(h);
-      cardWrap.classList.add('visible');
-      requestAnimationFrame(() => requestAnimationFrame(() => cardWrap.classList.add('in')));
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    favChips.appendChild(chip);
-  });
-}
-renderFavs();
-
-/* ================================================================
-   COPY
-================================================================ */
-function copyIdea() {
-  if (!currentHustle) return;
-  const h = currentHustle;
-  const text = `💡 ${h.emoji} ${h.title}\n${h.desc}\n\n📊 Difficulty: ${h.diff} | Startup: ${h.cost} | Time to Income: ${h.time}\n💰 Est. Monthly Income: ${h.income}\n\n#SideHustle #MakeMoney`;
-  navigator.clipboard.writeText(text).then(() => toast('Copied to clipboard 📋'));
-}
-
-/* ================================================================
-   SHARE
-================================================================ */
-function shareIdea() {
-  if (!currentHustle) return;
-  const h = currentHustle;
-  const text = `I just discovered a new side hustle idea: ${h.emoji} ${h.title} — potential to earn ${h.income}/month! Find yours at sidehustlefinder.app`;
-  if (navigator.share) {
-    navigator.share({ title: h.title, text, url: window.location.href }).catch(() => {});
-  } else {
-    navigator.clipboard.writeText(text).then(() => toast('Link copied — share away! ↗'));
-  }
-}
-
-/* ================================================================
-   TOAST
-================================================================ */
-function toast(msg) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2200);
-}
-
-/* ================================================================
-   EVENTS
-================================================================ */
-findBtn.addEventListener('click', showHustle);
-nextBtn.addEventListener('click', showHustle);
-favBtn.addEventListener('click', toggleFav);
-copyBtn.addEventListener('click', copyIdea);
-shareBtn.addEventListener('click', shareIdea);
-</script>
-    <script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
+  <script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
   <script src="https://molecularshindy.com/ce/8c/23/ce8c23155affc9d01a9b32028f7c7908.js"></script>
 </body>
 </html>
+
