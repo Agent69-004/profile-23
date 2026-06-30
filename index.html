@@ -1,375 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>💰 Make Money Online</title>
-  <meta name="description" content="Learn how to make money online – proven system. Start today." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>💰 Make Money Online</title>
+    <meta name="description" content="Learn how to make money online – proven system. Start today." />
 
-  <script type="text/javascript">
-    window._popunder = window._popunder || [];
-    
-    function triggerPopunder() {
-      // REPLACE 'YOUR_ZONE_ID' with your actual Popunder Zone ID
-      window._popunder.push(['open', 'YOUR_ZONE_ID']);
-      
-      const fb = document.getElementById('clickFeedback');
-      if (fb) {
-        fb.style.display = 'block';
-        setTimeout(() => { fb.style.display = 'none'; }, 5000);
-      }
-      return true;
-    }
+    <!-- ==========================================================
+    GOOGLE ANALYTICS (correctly placed in head)
+    ========================================================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPHK16FS45"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TPHK16FS45');
+    </script>
 
-    (function() {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      // REPLACE 'YOUR_ADSTERRA_ID' with your actual Adsterra ID
-      s.src = '//www.topcreativeformat.com/script.js?YOUR_ADSTERRA_ID';
-      document.head.appendChild(s);
-    })();
-  </script>
+    <!-- ==========================================================
+    ADSTERRA POPUNDER – REPLACE THE TWO PLACEHOLDERS BELOW
+    ========================================================== -->
+    <script type="text/javascript">
+        // Adsterra popunder queue
+        window._popunder = window._popunder || [];
 
-  <script type="text/javascript">
-    (function() {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = '//www.topcreativeformat.com/universal.js?YOUR_ADSTERRA_ID';
-      document.head.appendChild(s);
-    })();
-    
-  </script>
+        // This function fires on button click
+        function triggerPopunder() {
+            // Replace 'YOUR_ZONE_ID' with your actual Popunder Zone ID
+            window._popunder.push(['open', 'YOUR_ZONE_ID']);
 
-  <style>
-      <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPHK16FS45"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+            // Optional: show a friendly feedback toast
+            var fb = document.getElementById('clickFeedback');
+            if (fb) {
+                fb.style.display = 'block';
+                setTimeout(function() { fb.style.display = 'none'; }, 5000);
+            }
+            return true;
+        }
 
-    gtag('config', 'G-TPHK16FS45');
-  </script>
-    /* ----- RESET & FULLSCREEN CENTERING ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        // Load the Adsterra script – replace 'YOUR_ADSTERRA_ID' with your Publisher ID
+        (function() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//www.topcreativeformat.com/script.js?YOUR_ADSTERRA_ID';
+            document.head.appendChild(s);
+        })();
+    </script>
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #0b1a0e;
-      background-image: radial-gradient(circle at 50% 30%, rgba(0, 230, 118, 0.06) 0%, transparent 70%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      padding-bottom: 80px; /* space for sticky ad */
-      color: #e8f5e9;
-      text-align: center;
-      flex-direction: column;
-    }
+    <style>
+        /* ----- RESET & FULLSCREEN CENTERING ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 600px;
-      width: 100%;
-      padding: 20px;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0b1a0e;
+            background-image: radial-gradient(circle at 50% 30%, rgba(0, 230, 118, 0.06) 0%, transparent 70%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-bottom: 80px; /* space for sticky ad */
+            color: #e8f5e9;
+            text-align: center;
+            flex-direction: column;
+        }
 
-    /* ----- THE ONE BUTTON (Massive, Glowing) ----- */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 24px 48px;
-      background: linear-gradient(135deg, #00e676 0%, #00b85c 100%);
-      color: #051008;
-      font-weight: 900;
-      font-size: 1.8rem;
-      border: none;
-      border-radius: 80px;
-      cursor: pointer;
-      box-shadow: 0 8px 50px rgba(0, 230, 118, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3);
-      transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1);
-      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
-      width: 100%;
-      max-width: 440px;
-      position: relative;
-      letter-spacing: -0.5px;
-      touch-action: manipulation;
-    }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
 
-    .btn-primary::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
-      transform: rotate(25deg) translateY(-10%);
-      pointer-events: none;
-    }
+        /* ----- THE ONE BUTTON (Massive, Glowing) ----- */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 24px 48px;
+            background: linear-gradient(135deg, #00e676 0%, #00b85c 100%);
+            color: #051008;
+            font-weight: 900;
+            font-size: 1.8rem;
+            border: none;
+            border-radius: 80px;
+            cursor: pointer;
+            box-shadow: 0 8px 50px rgba(0, 230, 118, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1);
+            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            letter-spacing: -0.5px;
+            touch-action: manipulation;
+        }
 
-    .btn-primary:hover {
-      transform: scale(1.03) translateY(-3px);
-      box-shadow: 0 16px 60px rgba(0, 230, 118, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.4);
-    }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+            transform: rotate(25deg) translateY(-10%);
+            pointer-events: none;
+        }
 
-    .btn-primary:active {
-      transform: scale(0.95) translateY(0);
-      box-shadow: 0 4px 30px rgba(0, 230, 118, 0.3);
-    }
+        .btn-primary:hover {
+            transform: scale(1.03) translateY(-3px);
+            box-shadow: 0 16px 60px rgba(0, 230, 118, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+        }
 
-    /* Pulsing glow behind button */
-    .btn-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin: 30px 0;
-    }
+        .btn-primary:active {
+            transform: scale(0.95) translateY(0);
+            box-shadow: 0 4px 30px rgba(0, 230, 118, 0.3);
+        }
 
-    .btn-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 120%;
-      height: 160%;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(0, 230, 118, 0.20) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: pulse-ring 2.8s ease-in-out infinite;
-      pointer-events: none;
-    }
+        /* Pulsing glow behind button */
+        .btn-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 30px 0;
+        }
 
-    @keyframes pulse-ring {
-      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
-      50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
-      100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
-    }
+        .btn-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 160%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(0, 230, 118, 0.20) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-ring 2.8s ease-in-out infinite;
+            pointer-events: none;
+        }
 
-    /* ----- HEADLINE & SUBTEXT (Minimal) ----- */
-    .hero-emoji {
-      font-size: 4rem;
-      display: block;
-      margin-bottom: 10px;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
+        @keyframes pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+        }
 
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #ffffff 0%, #b2dfb8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+        /* ----- HEADLINE & SUBTEXT ----- */
+        .hero-emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
 
-    h1 .gold {
-      background: linear-gradient(135deg, #ffd700, #f5b342);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #b2dfb8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    .sub {
-      font-size: 1.1rem;
-      color: #9bb8a8;
-      margin: 12px 0 6px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        h1 .gold {
+            background: linear-gradient(135deg, #ffd700, #f5b342);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    /* ----- FEEDBACK TOAST (short, non‑intrusive) ----- */
-    #clickFeedback {
-      display: none;
-      position: fixed;
-      bottom: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0a1f12;
-      color: #00e676;
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      border: 1px solid rgba(0, 230, 118, 0.2);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-      z-index: 999;
-      white-space: nowrap;
-      backdrop-filter: blur(12px);
-      animation: slideUp 0.3s ease-out;
-      letter-spacing: 0.3px;
-    }
-    @keyframes slideUp {
-      0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
-      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-    }
+        .sub {
+            font-size: 1.1rem;
+            color: #9bb8a8;
+            margin: 12px 0 6px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* ----- STICKY FOOTER AD (kept for monetization – no visible branding) ----- */
-    .ad-sticky-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(5, 16, 8, 0.95);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(0, 230, 118, 0.06);
-      padding: 4px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 60px;
-    }
-    .ad-sticky-footer .ad-container {
-      width: 100%;
-      max-width: 728px;
-      margin: 0 auto;
-      text-align: center;
-      background: transparent;
-      border: none;
-      min-height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 10px;
-    }
+        /* ----- FEEDBACK TOAST (short, non‑intrusive) ----- */
+        #clickFeedback {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0a1f12;
+            color: #00e676;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            white-space: nowrap;
+            backdrop-filter: blur(12px);
+            animation: slideUp 0.3s ease-out;
+            letter-spacing: 0.3px;
+        }
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
 
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .btn-primary {
-        font-size: 1.4rem;
-        padding: 20px 32px;
-        gap: 12px;
-      }
-      .hero-emoji {
-        font-size: 3rem;
-      }
-      .sub {
-        font-size: 0.95rem;
-      }
-    }
+        /* ----- STICKY FOOTER AD (real monetization) ----- */
+        .ad-sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 16, 8, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 230, 118, 0.06);
+            padding: 4px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60px;
+        }
+        .ad-sticky-footer .ad-container {
+            width: 100%;
+            max-width: 728px;
+            margin: 0 auto;
+            text-align: center;
+            background: transparent;
+            border: none;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+        }
 
-    @media (max-width: 400px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-      .btn-primary {
-        font-size: 1.1rem;
-        padding: 16px 24px;
-      }
-    }
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .btn-primary {
+                font-size: 1.4rem;
+                padding: 20px 32px;
+                gap: 12px;
+            }
+            .hero-emoji {
+                font-size: 3rem;
+            }
+            .sub {
+                font-size: 0.95rem;
+            }
+        }
 
-    /* Minimal footer */
-    .footer-note {
-      margin-top: 40px;
-      font-size: 0.65rem;
-      color: #3a5a4a;
-    }
-    .footer-note a {
-      color: #5a8a6a;
-      text-decoration: none;
-    }
-    .footer-note a:hover {
-      color: #8bcba0;
-    }
-  </style>
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .btn-primary {
+                font-size: 1.1rem;
+                padding: 16px 24px;
+            }
+        }
+
+        /* Minimal footer */
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.65rem;
+            color: #3a5a4a;
+        }
+        .footer-note a {
+            color: #5a8a6a;
+            text-decoration: none;
+        }
+        .footer-note a:hover {
+            color: #8bcba0;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <!-- ===== HERO ===== -->
-    <span class="hero-emoji">💰</span>
-    <h1>
-      Learn How to <br />
-      <span class="gold">Make Money</span> Online
-    </h1>
-    <p class="sub">
-      Proven system trusted by thousands – start earning today.
-    </p>
+        <!-- ===== HERO ===== -->
+        <span class="hero-emoji">💰</span>
+        <h1>
+            Learn How to <br />
+            <span class="gold">Make Money</span> Online
+        </h1>
+        <p class="sub">
+            Proven system trusted by thousands – start earning today.
+        </p>
 
-    <!-- ===== THE ONE BUTTON ===== -->
-    <div class="btn-wrapper">
-      <button class="btn-primary" onclick="triggerPopunder();">
-        🚀 Get Instant Access
-        <span style="font-size:2rem; line-height:1;">→</span>
-      </button>
+        <!-- ===== THE ONE BUTTON ===== -->
+        <div class="btn-wrapper">
+            <button class="btn-primary" onclick="triggerPopunder();">
+                🚀 Get Instant Access
+                <span style="font-size:2rem; line-height:1;">→</span>
+            </button>
+        </div>
+
+        <!-- ===== MINIMAL FOOTER ===== -->
+        <div class="footer-note">
+            &copy; 2026 EarnHub &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a>
+        </div>
     </div>
 
-    <!-- ===== MINIMAL FOOTER ===== -->
-    <div class="footer-note">
-      &copy; 2026 EarnHub &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a>
+    <!-- ===== FEEDBACK TOAST ===== -->
+    <div id="clickFeedback">✅ Access granted! Check your email.</div>
+
+    <!-- ==========================================================
+    STICKY FOOTER AD – Replace the placeholder below with your
+    Adsterra banner code (320x50 or 728x90).
+    ========================================================== -->
+    <div class="ad-sticky-footer">
+        <div class="ad-container">
+            <!-- REPLACE THIS DIV with your actual Adsterra banner code -->
+            <div style="width:100%; text-align:center; color:#4a7a5a; font-size:0.6rem; padding:4px;">
+                &lt; Your Adsterra Banner (320x50) &gt;<br />
+                <span style="color:#2a4a3a;">[ Paste your ad code here ]</span>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- ===== FEEDBACK TOAST ===== -->
-  <div id="clickFeedback">✅ Access granted! Check your email.</div>
+    <!-- ==========================================================
+    FALLBACK: ensure popunder triggers even if script delayed
+    ========================================================== -->
+    <script type="text/javascript">
+        // Double‑check that the _popunder queue exists
+        window._popunder = window._popunder || [];
 
-  <!-- ============================================================
-  STICKY FOOTER AD (Monetization – replace with your Adsterra code)
-  ============================================================ -->
-  <div class="ad-sticky-footer">
-    <div class="ad-container">
-      <!-- Replace the line below with your actual Adsterra sticky ad code -->
-      <div style="width:100%; text-align:center; color:#4a7a5a; font-size:0.6rem; padding:4px;">
-        &lt; Ad Slot – 320x50 &gt;<br />
-        <span style="color:#2a4a3a;">[ Insert your ad code here ]</span>
-      </div>
-    </div>
-  </div>
+        // If the official Adsterra script also provides a global function,
+        // we call it as well (safety net).
+        window.triggerPopunder = function() {
+            window._popunder.push(['open', 'YOUR_ZONE_ID']); // <-- replace again
 
-  <!-- ============================================================
-  FALLBACK SCRIPT (Ensures the popunder fires reliably)
-  ============================================================ -->
-  <script type="text/javascript">
-    window._popunder = window._popunder || [];
+            if (window.Adsterra && typeof window.Adsterra.popunder === 'function') {
+                window.Adsterra.popunder();
+            }
 
-    window.triggerPopunder = function() {
-      window._popunder.push(['open', 'YOUR_ZONE_ID']);
-      
-      if (window.Adsterra && typeof window.Adsterra.popunder === 'function') {
-        window.Adsterra.popunder();
-      }
-      
-      const fb = document.getElementById('clickFeedback');
-      if (fb) {
-        fb.style.display = 'block';
-        setTimeout(() => { fb.style.display = 'none'; }, 5000);
-      }
-      
-      return false;
-    };
+            var fb = document.getElementById('clickFeedback');
+            if (fb) {
+                fb.style.display = 'block';
+                setTimeout(function() { fb.style.display = 'none'; }, 5000);
+            }
+            return false;
+        };
 
-    // Safety: attach to button if onclick was removed
-    document.addEventListener('DOMContentLoaded', function() {
-      const btn = document.querySelector('.btn-primary');
-      if (btn && !btn.hasAttribute('onclick')) {
-        btn.setAttribute('onclick', 'triggerPopunder();');
-      }
-    });
-  </script>
+        // Attach to the button if onclick was removed (safety)
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.querySelector('.btn-primary');
+            if (btn && !btn.hasAttribute('onclick')) {
+                btn.setAttribute('onclick', 'triggerPopunder();');
+            }
+        });
+    </script>
 
-  <script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
-  <script src="https://molecularshindy.com/ce/8c/23/ce8c23155affc9d01a9b32028f7c7908.js"></script>
+    <!-- ==========================================================
+    INSTRUCTIONS – DELETE THIS COMMENT BLOCK BEFORE UPLOADING
+    ========================================================== -->
+    <!-- 
+        1. Replace 'YOUR_ZONE_ID' (appears 3 times) with your actual Popunder Zone ID.
+        2. Replace 'YOUR_ADSTERRA_ID' (appears once in the script src) with your Publisher ID.
+        3. Replace the sticky footer ad placeholder with your actual Adsterra banner code.
+        4. Upload this file to your server – everything else works as-is.
+    -->
+
 </body>
 </html>
-
