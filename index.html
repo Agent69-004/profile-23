@@ -6,9 +6,7 @@
     <title>💰 Make Money Online</title>
     <meta name="description" content="Learn how to make money online – proven system. Start today." />
 
-    <!-- ==========================================================
-    GOOGLE ANALYTICS (correctly placed in head)
-    ========================================================== -->
+    <!-- ===== GOOGLE ANALYTICS ===== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPHK16FS45"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,39 +15,10 @@
         gtag('config', 'G-TPHK16FS45');
     </script>
 
-    <!-- ==========================================================
-    ADSTERRA POPUNDER – REPLACE THE TWO PLACEHOLDERS BELOW
-    ========================================================== -->
-    <script type="text/javascript">
-        // Adsterra popunder queue
-        window._popunder = window._popunder || [];
-
-        // This function fires on button click
-        function triggerPopunder() {
-            // Replace 'YOUR_ZONE_ID' with your actual Popunder Zone ID
-            window._popunder.push(['open', 'YOUR_ZONE_ID']);
-
-            // Optional: show a friendly feedback toast
-            var fb = document.getElementById('clickFeedback');
-            if (fb) {
-                fb.style.display = 'block';
-                setTimeout(function() { fb.style.display = 'none'; }, 5000);
-            }
-            return true;
-        }
-
-        // Load the Adsterra script – replace 'YOUR_ADSTERRA_ID' with your Publisher ID
-        (function() {
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = '//www.topcreativeformat.com/script.js?YOUR_ADSTERRA_ID';
-            document.head.appendChild(s);
-        })();
-    </script>
+    <!-- ===== ADSTERRA POPUNDER (your actual script) ===== -->
+    <script src="https://molecularshindy.com/7e/d9/46/7ed946c290d25ad41333fee6c14e8e55.js"></script>
 
     <style>
-        /* ----- RESET & FULLSCREEN CENTERING ----- */
         * {
             margin: 0;
             padding: 0;
@@ -65,7 +34,6 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            padding-bottom: 80px; /* space for sticky ad */
             color: #e8f5e9;
             text-align: center;
             flex-direction: column;
@@ -123,7 +91,6 @@
             box-shadow: 0 4px 30px rgba(0, 230, 118, 0.3);
         }
 
-        /* Pulsing glow behind button */
         .btn-wrapper {
             position: relative;
             display: flex;
@@ -152,7 +119,6 @@
             100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
         }
 
-        /* ----- HEADLINE & SUBTEXT ----- */
         .hero-emoji {
             font-size: 4rem;
             display: block;
@@ -191,91 +157,6 @@
             margin-right: auto;
         }
 
-        /* ----- FEEDBACK TOAST (short, non‑intrusive) ----- */
-        #clickFeedback {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0a1f12;
-            color: #00e676;
-            padding: 14px 32px;
-            border-radius: 60px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border: 1px solid rgba(0, 230, 118, 0.2);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-            z-index: 999;
-            white-space: nowrap;
-            backdrop-filter: blur(12px);
-            animation: slideUp 0.3s ease-out;
-            letter-spacing: 0.3px;
-        }
-        @keyframes slideUp {
-            0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
-            100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-        }
-
-        /* ----- STICKY FOOTER AD (real monetization) ----- */
-        .ad-sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(5, 16, 8, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(0, 230, 118, 0.06);
-            padding: 4px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 60px;
-        }
-        .ad-sticky-footer .ad-container {
-            width: 100%;
-            max-width: 728px;
-            margin: 0 auto;
-            text-align: center;
-            background: transparent;
-            border: none;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 10px;
-        }
-
-        /* ----- RESPONSIVE ----- */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .btn-primary {
-                font-size: 1.4rem;
-                padding: 20px 32px;
-                gap: 12px;
-            }
-            .hero-emoji {
-                font-size: 3rem;
-            }
-            .sub {
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-            h1 {
-                font-size: 1.6rem;
-            }
-            .btn-primary {
-                font-size: 1.1rem;
-                padding: 16px 24px;
-            }
-        }
-
-        /* Minimal footer */
         .footer-note {
             margin-top: 40px;
             font-size: 0.65rem;
@@ -288,13 +169,23 @@
         .footer-note a:hover {
             color: #8bcba0;
         }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .btn-primary { font-size: 1.4rem; padding: 20px 32px; gap: 12px; }
+            .hero-emoji { font-size: 3rem; }
+            .sub { font-size: 0.95rem; }
+        }
+        @media (max-width: 400px) {
+            h1 { font-size: 1.6rem; }
+            .btn-primary { font-size: 1.1rem; padding: 16px 24px; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
 
-        <!-- ===== HERO ===== -->
         <span class="hero-emoji">💰</span>
         <h1>
             Learn How to <br />
@@ -304,79 +195,21 @@
             Proven system trusted by thousands – start earning today.
         </p>
 
-        <!-- ===== THE ONE BUTTON ===== -->
         <div class="btn-wrapper">
-            <button class="btn-primary" onclick="triggerPopunder();">
+            <!-- No alert, no redirect – purely visual. Adsterra handles monetization. -->
+            <button class="btn-primary">
                 🚀 Get Instant Access
                 <span style="font-size:2rem; line-height:1;">→</span>
             </button>
         </div>
 
-        <!-- ===== MINIMAL FOOTER ===== -->
         <div class="footer-note">
             &copy; 2026 EarnHub &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a>
         </div>
     </div>
 
-    <!-- ===== FEEDBACK TOAST ===== -->
-    <div id="clickFeedback">✅ Access granted! Check your email.</div>
-
-    <!-- ==========================================================
-    STICKY FOOTER AD – Replace the placeholder below with your
-    Adsterra banner code (320x50 or 728x90).
-    ========================================================== -->
-    <div class="ad-sticky-footer">
-        <div class="ad-container">
-            <!-- REPLACE THIS DIV with your actual Adsterra banner code -->
-            <div style="width:100%; text-align:center; color:#4a7a5a; font-size:0.6rem; padding:4px;">
-                &lt; Your Adsterra Banner (320x50) &gt;<br />
-                <span style="color:#2a4a3a;">[ Paste your ad code here ]</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================================
-    FALLBACK: ensure popunder triggers even if script delayed
-    ========================================================== -->
-    <script type="text/javascript">
-        // Double‑check that the _popunder queue exists
-        window._popunder = window._popunder || [];
-
-        // If the official Adsterra script also provides a global function,
-        // we call it as well (safety net).
-        window.triggerPopunder = function() {
-            window._popunder.push(['open', 'YOUR_ZONE_ID']); // <-- replace again
-
-            if (window.Adsterra && typeof window.Adsterra.popunder === 'function') {
-                window.Adsterra.popunder();
-            }
-
-            var fb = document.getElementById('clickFeedback');
-            if (fb) {
-                fb.style.display = 'block';
-                setTimeout(function() { fb.style.display = 'none'; }, 5000);
-            }
-            return false;
-        };
-
-        // Attach to the button if onclick was removed (safety)
-        document.addEventListener('DOMContentLoaded', function() {
-            var btn = document.querySelector('.btn-primary');
-            if (btn && !btn.hasAttribute('onclick')) {
-                btn.setAttribute('onclick', 'triggerPopunder();');
-            }
-        });
-    </script>
-
-    <!-- ==========================================================
-    INSTRUCTIONS – DELETE THIS COMMENT BLOCK BEFORE UPLOADING
-    ========================================================== -->
-    <!-- 
-        1. Replace 'YOUR_ZONE_ID' (appears 3 times) with your actual Popunder Zone ID.
-        2. Replace 'YOUR_ADSTERRA_ID' (appears once in the script src) with your Publisher ID.
-        3. Replace the sticky footer ad placeholder with your actual Adsterra banner code.
-        4. Upload this file to your server – everything else works as-is.
-    -->
+    <!-- ===== ADSTERRA SOCIAL BAR (your actual script) ===== -->
+    <script src="https://molecularshindy.com/ce/8c/23/ce8c23155affc9d01a9b32028f7c7908.js"></script>
 
 </body>
 </html>
